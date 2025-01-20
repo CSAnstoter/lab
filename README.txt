@@ -28,3 +28,12 @@ Credits:
 	Other:
 		jQuery (jquery.com)
 		Responsive Tools (github.com/ajlkn/responsive-tools)
+
+
+
+
+	<!-- Here is a paragraph where you can put a link to your CV -->
+								<p>
+									<!-- Note you will want to change where this points to! -->
+									<a href="images/Astronomy.jpg" target="_blank">Curriculum Vitae</a>
+								< /p>
