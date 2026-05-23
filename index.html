@@ -1103,7 +1103,7 @@
 				const svgEl = document.getElementById('collab-svg');
 				if (!wrap || !svgEl || typeof d3 === 'undefined') return;
 
-				const W = () => wrap.clientWidth;
+				const W = () => { const w = wrap.clientWidth; return w > 0 ? w : 480; };
 				const H = () => 420;
 
 				const svg = d3.select(svgEl).attr('width', W()).attr('height', H());
@@ -1204,22 +1204,32 @@
 					ng.attr('transform',d=>'translate('+d.x+','+d.y+')');
 				});
 
-				// Centre on open
+				// Initial centre (uses fallback width if article hidden)
 				svg.call(zoom.transform, d3.zoomIdentity.translate(W()/2, H()/2).scale(0.78));
 
-				// Re-centre if article is opened after init
-				const obs = new MutationObserver(()=>{
-					if(wrap.offsetParent!==null){
-						svg.attr('width', W());
-						sim.alpha(0.3).restart();
+				// Re-run when #group tab is opened
+				window.addEventListener('hashchange', function() {
+					if (window.location.hash === '#group') {
+						const realW = wrap.clientWidth;
+						if (realW > 0) svg.attr('width', realW);
+						sim.alpha(0.5).restart();
+						setTimeout(function() {
+							svg.call(zoom.transform,
+								d3.zoomIdentity.translate(W()/2, H()/2).scale(0.78));
+						}, 300);
 					}
 				});
-				obs.observe(document.getElementById('group'), {attributes:true, attributeFilter:['style','class']});
 			}
 
-			// Wait for D3 to be ready
-			if(typeof d3!=='undefined'){ init(); }
-			else { window.addEventListener('load', init); }
+			// Robust init: retry until D3 and DOM are both ready
+			function tryInit() {
+				if (typeof d3 === 'undefined' || !document.getElementById('collab-wrap')) {
+					setTimeout(tryInit, 80);
+					return;
+				}
+				init();
+			}
+			document.addEventListener('DOMContentLoaded', tryInit);
 		})();
 		</script>
 
