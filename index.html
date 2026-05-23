@@ -11,6 +11,140 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<style>
+			/* ── CAROUSEL ─────────────────────────────────────────────── */
+			.carousel {
+				position: relative;
+				overflow: hidden;
+				width: 100%;
+				max-width: 500px;
+				margin: 0 auto 0.5rem;
+				border-radius: 4px;
+			}
+			.carousel-track {
+				display: flex;
+				transition: transform 0.4s ease;
+			}
+			.carousel-track img {
+				min-width: 100%;
+				flex-shrink: 0;
+				display: block;
+			}
+			.carousel-btn {
+				position: absolute;
+				top: 50%;
+				transform: translateY(-50%);
+				background: rgba(0,0,0,0.45);
+				color: #fff;
+				border: none;
+				font-size: 2rem;
+				line-height: 1;
+				padding: 0.3rem 0.65rem 0.4rem;
+				cursor: pointer;
+				z-index: 10;
+				transition: background 0.2s;
+			}
+			.carousel-btn:hover { background: rgba(0,0,0,0.7); }
+			.carousel-btn.prev { left: 0; border-radius: 0 3px 3px 0; }
+			.carousel-btn.next { right: 0; border-radius: 3px 0 0 3px; }
+			.carousel-dots {
+				text-align: center;
+				padding: 0.5rem 0 0.25rem;
+			}
+			.carousel-dot {
+				display: inline-block;
+				width: 7px;
+				height: 7px;
+				border-radius: 50%;
+				background: rgba(255,255,255,0.9);
+				margin: 0 3px;
+				cursor: pointer;
+				transition: opacity 0.2s;
+			}
+
+			/* ── NEWS TIMELINE ────────────────────────────────────────── */
+			.news-section { margin-bottom: 2rem; }
+
+			.news-year-header {
+				display: flex;
+				align-items: center;
+				gap: 0.8rem;
+				margin: 2rem 0 1.2rem;
+			}
+			.news-year-header:first-child { margin-top: 0; }
+			.news-year-label {
+				font-size: 0.7rem;
+				font-weight: 700;
+				letter-spacing: 0.14em;
+				text-transform: uppercase;
+				opacity: 0.45;
+				white-space: nowrap;
+			}
+			.news-year-rule {
+				flex: 1;
+				height: 1px;
+				background: rgba(255,255,255,0.15);
+			}
+
+			.news-timeline {
+				position: relative;
+				padding-left: 0.9rem;
+				border-left: 1px solid rgba(255,255,255,0.18);
+			}
+
+			.news-month-group { margin-bottom: 1.4rem; }
+
+			.news-month-label {
+				font-size: 0.68rem;
+				font-weight: 700;
+				letter-spacing: 0.12em;
+				text-transform: uppercase;
+				opacity: 0.45;
+				margin-bottom: 0.5rem;
+				display: flex;
+				align-items: center;
+				gap: 0.5rem;
+			}
+			.news-month-label::before {
+				content: '';
+				display: inline-block;
+				width: 7px;
+				height: 7px;
+				border-radius: 50%;
+				background: rgba(255,255,255,0.55);
+				flex-shrink: 0;
+				margin-left: -1.25rem;
+			}
+
+			.news-entry {
+				font-size: 0.92rem;
+				line-height: 1.65;
+				margin-bottom: 0.7rem;
+				padding-left: 0.1rem;
+			}
+			.news-entry + .news-entry {
+				padding-top: 0.5rem;
+				border-top: 1px solid rgba(255,255,255,0.07);
+			}
+
+			.news-image-wrap {
+				margin: 0.8rem 0;
+				text-align: center;
+			}
+			.news-image-wrap img {
+				max-width: 100%;
+				border-radius: 4px;
+			}
+
+			blockquote {
+				border-left: 2px solid rgba(255,255,255,0.25);
+				margin: 0.6rem 0 0.6rem 0.2rem;
+				padding: 0.3rem 0 0.3rem 0.8rem;
+				opacity: 0.8;
+				font-style: italic;
+				font-size: 0.88rem;
+			}
+		</style>
 	</head>
 	<body class="is-preload">
 
@@ -40,7 +174,7 @@
 
 			<div id="main">
 
-				<!-- ABOUT -->
+				<!-- ═══════════ ABOUT ═══════════ -->
 				<article id="about">
 					<span class="image">
 						<center><img src="images/csa.jpeg" style="width:150px; height:180px;" class="center"/></center>
@@ -88,17 +222,14 @@
 					</p>
 				</article>
 
-				<!-- RESEARCH -->
+				<!-- ═══════════ RESEARCH ═══════════ -->
 				<article id="research">
 					<h2 class="major">Research</h2>
 
-					<!-- ── SECTION 1: METASTABLE ANIONS ─────────────────────── -->
 					<h3>Metastable Anions and Electron-Driven Reactivity</h3>
-
 					<center><span class="image main">
 						<img src="images/epdriven.png" style="width:400px; height:280px; object-fit: cover;"/>
 					</span></center><br>
-
 					<p>
 						Electron-driven processes are ubiquitous in chemistry and biology. When an electron attaches
 						to a neutral molecule, it forms a negatively charged species — <em>an anion</em> — that is
@@ -128,25 +259,18 @@
 						the solvent.
 					</p>
 
-					<!-- Collaboration pills -->
 					<div style="display:flex; flex-wrap:wrap; gap:0.6rem; margin:1.2rem 0 1.8rem;">
 						<a href="https://garand.chem.wisc.edu/" target="_blank" rel="noopener"
-						   style="display:inline-flex; align-items:center; gap:0.5rem; padding:0.4rem 0.85rem;
-						          border:1px solid rgba(255,255,255,0.25); border-radius:999px; font-size:0.78rem;
-						          letter-spacing:0.04em; color:inherit; text-decoration:none;
-						          background:rgba(255,255,255,0.06);"
+						   style="display:inline-flex;align-items:center;gap:0.5rem;padding:0.4rem 0.85rem;border:1px solid rgba(255,255,255,0.25);border-radius:999px;font-size:0.78rem;letter-spacing:0.04em;color:inherit;text-decoration:none;background:rgba(255,255,255,0.06);"
 						   onmouseover="this.style.background='rgba(255,255,255,0.13)';this.style.borderColor='rgba(255,255,255,0.5)'"
 						   onmouseout="this.style.background='rgba(255,255,255,0.06)';this.style.borderColor='rgba(255,255,255,0.25)'">
-							<span style="opacity:0.55; font-size:0.9em;">&#9671;</span> Garand group &middot; UW–Madison
+							<span style="opacity:0.55;">&#9671;</span> Garand group &middot; UW–Madison
 						</a>
 						<a href="https://www.matsikalab.org/" target="_blank" rel="noopener"
-						   style="display:inline-flex; align-items:center; gap:0.5rem; padding:0.4rem 0.85rem;
-						          border:1px solid rgba(255,255,255,0.25); border-radius:999px; font-size:0.78rem;
-						          letter-spacing:0.04em; color:inherit; text-decoration:none;
-						          background:rgba(255,255,255,0.06);"
+						   style="display:inline-flex;align-items:center;gap:0.5rem;padding:0.4rem 0.85rem;border:1px solid rgba(255,255,255,0.25);border-radius:999px;font-size:0.78rem;letter-spacing:0.04em;color:inherit;text-decoration:none;background:rgba(255,255,255,0.06);"
 						   onmouseover="this.style.background='rgba(255,255,255,0.13)';this.style.borderColor='rgba(255,255,255,0.5)'"
 						   onmouseout="this.style.background='rgba(255,255,255,0.06)';this.style.borderColor='rgba(255,255,255,0.25)'">
-							<span style="opacity:0.55; font-size:0.9em;">&#9671;</span> Matsika group &middot; Temple University
+							<span style="opacity:0.55;">&#9671;</span> Matsika group &middot; Temple University
 						</a>
 					</div>
 
@@ -170,20 +294,16 @@
 						</li>
 					</ul>
 
-					<!-- ── DIVIDER ──────────────────────────────────────────── -->
 					<hr style="border:none; border-top:1px solid rgba(255,255,255,0.15); margin:2.5rem 0;"/>
 
-					<!-- ── SECTION 2: AROMATICITY ───────────────────────────── -->
 					<h3>The Magnetic Fingerprints of Aromaticity</h3>
-
 					<span class="image">
 						<center><img src="images/arom.png" style="width:480px; height:380px; object-fit: cover;"/></center>
 					</span><br>
-
 					<p>
 						Aromaticity is one of the most powerful organising concepts in chemistry, yet its definition
-						remains stubbornly elusive. The <strong>magnetic criterion</strong>, based on the ring
-						current induced when a conjugated molecule is placed in an external magnetic field, is
+						remains stubbornly elusive. The <strong>magnetic criterion</strong> — based on the ring
+						current induced when a conjugated molecule is placed in an external magnetic field — is
 						widely regarded as the most rigorous theoretical diagnostic. Aromatic systems (those with
 						4<em>n</em>+2 &pi; electrons) sustain a diatropic ring current; antiaromatic systems
 						(4<em>n</em> &pi; electrons) sustain a paratropic one.
@@ -200,47 +320,37 @@
 						In practice, we work closely with synthetic chemistry groups to characterise experimentally
 						realised systems. We collaborated with the
 						<a href="https://www.uni-frankfurt.de/58708118/Group_of_Prof__Dr__Matthias_Wagner">Wagner group</a>
-						(Goethe Universität, Frankfurt) on BN- and BO-doped [16]annulenes, macrocyclic
+						(Goethe Universität, Frankfurt) on BN- and BO-doped [16]annulenes — macrocyclic
 						<strong>redox-active aromatic switches</strong> that transition from non-aromatic to globally
-						aromatic on two-electron reduction, providing the complete ipsocentric analysis of their
+						aromatic on two-electron reduction — providing the complete ipsocentric analysis of their
 						neutral and dianionic states. More recently, collaboration with the
 						<a href="https://www.ingleson.chem.ed.ac.uk/">Ingleson group</a>
-						(University of Edinburgh) on a novel base-free two-coordinate oxoborane, recognised as a
-						<em>Very Important Paper</em> in <em>Angewandte Chemie</em>, demonstrated the power of the
+						(University of Edinburgh) on a novel base-free two-coordinate oxoborane — recognised as a
+						<em>Very Important Paper</em> in <em>Angewandte Chemie</em> — demonstrated the power of the
 						ipsocentric approach for characterising aromaticity in highly unusual and reactive main-group
 						heterocycles. These collaborations reflect a broader interest in understanding how heteroatom
 						substitution, molecular topology, and redox state collectively govern aromatic character in
 						synthetically realised systems.
 					</p>
 
-					<!-- Collaboration pills -->
 					<div style="display:flex; flex-wrap:wrap; gap:0.6rem; margin:1.2rem 0 1.8rem;">
 						<a href="https://www.uni-frankfurt.de/58708118/Group_of_Prof__Dr__Matthias_Wagner" target="_blank" rel="noopener"
-						   style="display:inline-flex; align-items:center; gap:0.5rem; padding:0.4rem 0.85rem;
-						          border:1px solid rgba(255,255,255,0.25); border-radius:999px; font-size:0.78rem;
-						          letter-spacing:0.04em; color:inherit; text-decoration:none;
-						          background:rgba(255,255,255,0.06);"
+						   style="display:inline-flex;align-items:center;gap:0.5rem;padding:0.4rem 0.85rem;border:1px solid rgba(255,255,255,0.25);border-radius:999px;font-size:0.78rem;letter-spacing:0.04em;color:inherit;text-decoration:none;background:rgba(255,255,255,0.06);"
 						   onmouseover="this.style.background='rgba(255,255,255,0.13)';this.style.borderColor='rgba(255,255,255,0.5)'"
 						   onmouseout="this.style.background='rgba(255,255,255,0.06)';this.style.borderColor='rgba(255,255,255,0.25)'">
-							<span style="opacity:0.55; font-size:0.9em;">&#9671;</span> Wagner group &middot; Goethe Universität
+							<span style="opacity:0.55;">&#9671;</span> Wagner group &middot; Goethe Universität
 						</a>
 						<a href="https://www.ingleson.chem.ed.ac.uk/" target="_blank" rel="noopener"
-						   style="display:inline-flex; align-items:center; gap:0.5rem; padding:0.4rem 0.85rem;
-						          border:1px solid rgba(255,255,255,0.25); border-radius:999px; font-size:0.78rem;
-						          letter-spacing:0.04em; color:inherit; text-decoration:none;
-						          background:rgba(255,255,255,0.06);"
+						   style="display:inline-flex;align-items:center;gap:0.5rem;padding:0.4rem 0.85rem;border:1px solid rgba(255,255,255,0.25);border-radius:999px;font-size:0.78rem;letter-spacing:0.04em;color:inherit;text-decoration:none;background:rgba(255,255,255,0.06);"
 						   onmouseover="this.style.background='rgba(255,255,255,0.13)';this.style.borderColor='rgba(255,255,255,0.5)'"
 						   onmouseout="this.style.background='rgba(255,255,255,0.06)';this.style.borderColor='rgba(255,255,255,0.25)'">
-							<span style="opacity:0.55; font-size:0.9em;">&#9671;</span> Ingleson group &middot; University of Edinburgh
+							<span style="opacity:0.55;">&#9671;</span> Ingleson group &middot; University of Edinburgh
 						</a>
-						<a href="https://sheffield.ac.uk/mps/people/honorary/patrick-w-fowler-frs" target="_blank" rel="noopener"
-						   style="display:inline-flex; align-items:center; gap:0.5rem; padding:0.4rem 0.85rem;
-						          border:1px solid rgba(255,255,255,0.25); border-radius:999px; font-size:0.78rem;
-						          letter-spacing:0.04em; color:inherit; text-decoration:none;
-						          background:rgba(255,255,255,0.06);"
+						<a href="https://www.sheffield.ac.uk/chemistry/staff/patrick-fowler" target="_blank" rel="noopener"
+						   style="display:inline-flex;align-items:center;gap:0.5rem;padding:0.4rem 0.85rem;border:1px solid rgba(255,255,255,0.25);border-radius:999px;font-size:0.78rem;letter-spacing:0.04em;color:inherit;text-decoration:none;background:rgba(255,255,255,0.06);"
 						   onmouseover="this.style.background='rgba(255,255,255,0.13)';this.style.borderColor='rgba(255,255,255,0.5)'"
 						   onmouseout="this.style.background='rgba(255,255,255,0.06)';this.style.borderColor='rgba(255,255,255,0.25)'">
-							<span style="opacity:0.55; font-size:0.9em;">&#9671;</span> Fowler group &middot; University of Sheffield
+							<span style="opacity:0.55;">&#9671;</span> Fowler group &middot; University of Sheffield
 						</a>
 					</div>
 
@@ -253,7 +363,7 @@
 						<li><a href="https://onlinelibrary.wiley.com/doi/full/10.1002/anie.202419094"><em>A Base-Free Two-Coordinate Oxoborane</em></a><br>
 							Clement R. P. Millet, Dominic R. Willcox, Gary S. Nichol, <b>Cate S. Anstöter</b> &amp; Michael J. Ingleson<br>
 							<b>2024</b>, <em>Angewandte Chemie</em>, 65, e202419094
-							&nbsp;<span style="font-size:0.72rem; padding:0.12rem 0.4rem; border:1px solid rgba(255,255,255,0.3); border-radius:3px; opacity:0.75; letter-spacing:0.05em;">VIP</span>
+							&nbsp;<span style="font-size:0.72rem;padding:0.12rem 0.4rem;border:1px solid rgba(255,255,255,0.3);border-radius:3px;opacity:0.75;letter-spacing:0.05em;">VIP</span>
 						</li><br>
 						<li><a href="https://pubs.acs.org/doi/full/10.1021/jacs.4c02163"><em>Tetramerization of BEB-Doped Phenalenyls to Obtain (BE)<sub>8</sub>-[16]Annulenes (E = N, O)</em></a><br>
 							Alexander S. Scholz, Michael Bolte, Alexander Virovets, Eugenia Peresypkina, Hans-Wolfram Lerner, <b>Cate S. Anstöter</b><sup>*</sup> &amp; Matthias Wagner<br>
@@ -264,18 +374,15 @@
 							<b>2024</b>, <em>ChemPhysChem</em>, 25, e202300791
 						</li>
 					</ul>
-
 				</article>
 
-				<!-- GROUP -->
+				<!-- ═══════════ GROUP ═══════════ -->
 				<article id="group">
 					<h2 class="major">Group</h2>
 					<p>
 						<img src="images/chiara.JPG" style="width:200px; height:180px; object-fit: cover;">
-						<br>
-						<b>Chiara Beldì</b>
-						<br><i>PhD student</i> (2024-2027)
-						<br>
+						<br><b>Chiara Beldì</b>
+						<br><i>PhD student</i> (2024-2027)<br>
 						Bio: Chiara completed her master's degree in Physics and Astronomy at the University of Glasgow. In her master's project,
 						she studied the chemistry of hydrocarbons in interstellar space using a chemical kinetics simulation. Following this experience,
 						she developed an interest in computational astrochemistry and joined the group as a PhD student in 2024. Chiara is co-supervised by <a href="https://isla-edi.com/author/ewen-k.-campbell/">Dr. Ewen K. Campbell</a>.
@@ -285,10 +392,8 @@
 					<h2>Alumni</h2>
 					<p>
 						<img src="images/ash_photo.jpg" style="width:200px; height:180px; object-fit: cover;">
-						<br>
-						<b>Ashutosh Jadhav</b>
-						<br><i>MRes student</i> (2024-2025)
-						<br>
+						<br><b>Ashutosh Jadhav</b>
+						<br><i>MRes student</i> (2024-2025)<br>
 						Bio: Ashutosh received a Master's degree in Analytical Chemistry, complemented by a Postgraduate Diploma in Regulatory Affairs, from the University of Mumbai, India.
 						He is co-supervised by Prof. Anita Jones, and his research project is focussed on exploring an innovative fluorescent nucleobase analog, ABN.
 						This project aims to use computational chemistry to understand the excited states of ABN, specifically the fluorescence properties and solvent assisted excited state proton transfer.
@@ -296,10 +401,8 @@
 					<p>
 						<br>
 						<img src="images/Annie.jpg" style="width:200px; height:180px; object-fit: cover;">
-						<br>
-						<b>Annie Hunter</b>
-						<br><i>Carnegie Trust Intern</i> (Summer 2025)
-						<br>
+						<br><b>Annie Hunter</b>
+						<br><i>Carnegie Trust Intern</i> (Summer 2025)<br>
 						Bio: Originally from Spain, Annie began her MChem degree at the University of Edinburgh in 2022.
 						She is currently a third year student with a particular interest in molecular orbital theory
 						and in the early stages of a summer internship investigating the (anti)aromaticity of PAHs containing heavier atoms with Cate, for which she is funded by the Carnegie Trust.
@@ -312,7 +415,7 @@
 					</ul>
 				</article>
 
-				<!-- PUBLICATIONS -->
+				<!-- ═══════════ PUBLICATIONS ═══════════ -->
 				<article id="publications">
 					<h2 class="major">Publications</h2>
 					Link to CSA's Google Scholar is <a href="https://scholar.google.com/citations?user=pne9pIwAAAAJ&hl=en">here</a><br>
@@ -387,7 +490,7 @@
 								Miloš Ranković, Pamir Nag, Cate S. Anstöter, Golda Mensa-Bonsu, Ragesh Kumar TP, Jan R. R. Verlet &amp; Juraj Fedor<br>
 								<b>2022</b>, <em>J. Chem. Phys.</em>, 157, 064302
 							</li><br>
-							<li><a href="https://pubs.aip.org/aip/jcp/article/157/6/064302/2841701"><em>A Hückel Model for the Excited-State Dynamics of a Protein Chromophore Developed Using Photoelectron Imaging</em></a><br>
+							<li><a href="https://pubs.acs.org/doi/full/10.1021/acs.accounts.1c00749"><em>A Hückel Model for the Excited-State Dynamics of a Protein Chromophore Developed Using Photoelectron Imaging</em></a><br>
 								Cate S Anstöter<sup>*</sup> &amp; Jan R. R. Verlet<br>
 								<b>2022</b>, <em>Acc. Chem. Res.</em>, 55, 1205
 							</li><br>
@@ -501,7 +604,7 @@
 							</li><br>
 							<li><a href="https://www.tandfonline.com/doi/full/10.1080/0144235X.2016.1203522"><em>Ultrafast Dynamics of Temporary Anions Probed Through the Prism of Photodetachment</em></a><br>
 								Cate S. Anstöter, James N. Bull &amp; Jan R. R. Verlet<br>
-								<b>2016</b>, <em>International Reviews in Physical Chemistry</em>, 8, 2268
+								<b>2016</b>, <em>International Reviews in Physical Chemistry</em>, 35, 285
 							</li><br>
 							<li><a href="https://pubs.acs.org/doi/full/10.1021/acs.jpcb.6b05271"><em>The Vitamin E Radical Probed by Anion Photoelectron Imaging</em></a><br>
 								Cate S. Anstöter, Christopher W. West, James N. Bull &amp; Jan RR Verlet<br>
@@ -515,100 +618,242 @@
 					</p>
 				</article>
 
-				<!-- NEWS -->
+				<!-- ═══════════ NEWS ═══════════ -->
 				<article id="news">
 					<h2 class="major">News</h2>
 
-					<h2>Upcoming</h2>
-					<dl>
-						<h3>2026</h3>
-						<dt>August</dt>
-						<dd>Cate will give an invited talk at the <a href="https://advances-in-theory-of-electronic-resonances.raiselysite.com/">Advances in Theory of Electronic Resonances</a> workshop in Telluride!</dd>
-						<dd>Chiara will join the <a href="https://iauarchive.eso.org/administration/membership/individual/15041/">García-Hernández group</a> in Tenerife, as part of a short term scientific mission. This STSM is supported by <a href="https://research.iac.es/proyecto/nanospace/">Carbon Molecular Nanostructures in Space COST network</a>!</dd>
-						<dt>June</dt>
-						<dd>Cate will host the <a href="https://csanstoter.github.io/MAGIC2026/">6th Workshop MAGnetically Induced Currents in molecules</a> at the University of Glasgow.</dd>
-						<dt>May</dt>
-						<dd>Cate took part in <a href="https://pintofscience.co.uk/">Pint of Science</a>'s <a href="https://www.glasgowsciencecentre.org/creative-reactions">Creative Reactions</a> festival, which pairs scientists with local artists — the artist then creates an original artwork inspired by the scientist's research. Cate was paired with Glasgow-based artist <a href="https://amusing-handball-242.notion.site/Gabriele-Rossi-Portfolio-2e6fccea9e5c80c8abd9c3f7cd3bd605">Gabriele Rossi</a>, who was inspired to build a sculpture. In his own words:<br><br>
-						<blockquote><i>"An ominous sun god stands over a sea of molecules, bombarding them with high energy rays. The molecules twist and dance while being hit by high energy particles. Will they survive the onslaught or will they break and never be the same again..."</i></blockquote><br>
-						<div class="carousel" id="carousel-creative-reactions">
-							<div class="carousel-track" id="carousel-creative-reactions-track">
-								<img src="images/GR1.jpeg" style="width:500px; height:380px; object-fit: cover;" alt="Creative Reactions 1"/>
-								<img src="images/GR2.jpeg" style="width:500px; height:380px; object-fit: cover;" alt="Creative Reactions 2"/>
-								<img src="images/GR3.jpeg" style="width:500px; height:380px; object-fit: cover;" alt="Creative Reactions 3"/>
+					<!-- ── 2026 ── -->
+					<div class="news-year-header">
+						<span class="news-year-label">2026</span>
+						<div class="news-year-rule"></div>
+					</div>
+					<div class="news-timeline">
+
+						<div class="news-month-group">
+							<div class="news-month-label">Upcoming — August</div>
+							<div class="news-entry">
+								Cate will give an invited talk at the <a href="https://advances-in-theory-of-electronic-resonances.raiselysite.com/">Advances in Theory of Electronic Resonances</a> workshop in Telluride!
 							</div>
-							<button class="carousel-btn prev" onclick="moveCarousel('carousel-creative-reactions', -1)">&#8249;</button>
-							<button class="carousel-btn next" onclick="moveCarousel('carousel-creative-reactions', 1)">&#8250;</button>
+							<div class="news-entry">
+								Chiara will join the <a href="https://iauarchive.eso.org/administration/membership/individual/15041/">García-Hernández group</a> in Tenerife for a short term scientific mission, supported by the <a href="https://research.iac.es/proyecto/nanospace/">Carbon Molecular Nanostructures in Space COST network</a>.
+							</div>
 						</div>
-						<div class="carousel-dots" id="carousel-creative-reactions-dots"></div>
-						</dd>
-						<dd>Cate gave a talk at <a href="https://csd11.si/index.html">Computers in Scientific Discovery 11</a>, in Kranjska Gora, Slovenia.<br>
-						<center><span class="image main"><img src="images/csd11.jpg" style="width:500px; height:380px; object-fit: cover;"/></span></center></dd>
-						<dt>April</dt>
-						<dd>New paper with the Matsika group <a href="https://pubs.acs.org/doi/10.1021/acs.jpclett.6c00590">is out now!</a>
-						<center><span class="image main"><img src="images/cover.jpg" style="width:380px; height:500px; object-fit: cover;"/></span></center>
-						Check out Kanishka and Maneesh's cover!</dd>
-						<dt>January</dt>
-						<dd>Cate has been elected as the secretary of the <a href="https://spectroscopyanddynamics.uk/sdg-meeting/">RSC Spectroscopy &amp; Dynamics special interest group</a></dd>
-						<dd>The <a href="https://winterschool.cc/program">12th edition of the Virtual Winter School of Computational Chemistry</a> ran successfully. Find the recorded talks <a href="https://zenodo.org/communities/vwscc/records?q=&l=list&p=1&s=10&sort=newest">here</a></dd>
-						<dd>Cate gave an invited talk at the <a href="https://www.icesaa-4.in/">4<sup>th</sup> International Conference on Excited State Aromaticity and Antiaromaticity (ICESAA-4)</a> hosted by ISSER Thiruvananthapuram!</dd>
-						<center><span class="image main"><img src="images/DSC_7309.JPG" style="width:500px; height:350px; object-fit: cover;"/></span></center>
-					</dl>
 
-					<h3>2025</h3>
-					<dl>
-						<dt>November</dt>
-						<dd>Our paper on perturbing the photochemical landscape of organic sunscreen AVB <a href="https://pubs.acs.org/doi/10.1021/jacs.5c12521">is available now online</a> at <em>JACS</em>!</dd>
-						<dt>October</dt>
-						<dd>Cate joined the University of Glasgow as a Lecturer in Physical Chemistry!</dd>
-						<dt>August</dt>
-						<dd>Annie gave an excellent presentation on the work from her summer project at a summer research symposium.</dd>
-						<center><img src="images/IMG_5655.jpeg" style="width:500px; height:380px; object-fit: cover;"/></center>
-						<dt>June</dt>
-						<dd>Annie joins the group for a summer project, funded by a Carnegie Scholarship!</dd>
-						<dd>The VWSCC ran a special one-day event, to showcase the Q-Chem 6.3. Find the recorded talks <a href="https://zenodo.org/records/15648308">here</a></dd>
-						<dt>May</dt>
-						<dd>Cate visited KU Leuven to give a seminar and meet with the <a href="https://chem.kuleuven.be/en/research/qcpc/tue">Jagau group</a></dd>
-						<dt>April</dt>
-						<dd>Cate gave an invited talk and panel discussion as part of the <a href="https://cosmosproject.co.uk/news/ecr_careers_and_science_1/"><em>Women in Photochemistry</em></a> Meeting at UCL, as part of UPDICE</dd>
-						<center><img src="images/cosmos.jpg" style="width:500px; height:280px; object-fit: cover;"/></center>
-						<dt>January</dt>
-						<dd><a href="https://doi.org/10.1002/cphc.202401069"><em>Perturbing Pentalene</em> invited paper</a> is online at <em>PhysChemPhys</em>!</dd>
-						<dd>The <a href="https://winterschool.cc/program">11th edition of the Virtual Winter School of Computational Chemistry</a> ran successfully. Find the recorded talks <a href="https://zenodo.org/communities/vwscc/records?q=&l=list&p=1&s=10&sort=newest">here</a></dd>
-						<dd>CSA group attended the RSC Spectroscopy and Dynamics Group Meeting in Leicester, Chiara presented a poster and Cate gave an invited talk.</dd>
-					</dl>
+						<div class="news-month-group">
+							<div class="news-month-label">Upcoming — June</div>
+							<div class="news-entry">
+								Cate will host the <a href="https://csanstoter.github.io/MAGIC2026/">6th Workshop MAGnetically Induced Currents in molecules</a> at the University of Glasgow.
+							</div>
+						</div>
 
-					<h3>2024</h3>
-					<dl>
-						<dt>November</dt>
-						<dd>Paper in collaboration with the <a href="https://www.ingleson.chem.ed.ac.uk/">Ingleson group</a> is <a href="https://doi.org/10.1002/anie.202419094">out now</a> as a VIP paper in Angewandte</dd>
-						<dd>Cate gave a departmental seminar at Newcastle University</dd>
-						<dt>September</dt>
-						<dd>Cate gave an invited talk at the <a href="https://www.plus.ac.at/magic2024/">5th Workshop on MAGnetically Induced Molecular Currents</a> in Frauenwörth</dd>
-						<center><span class="image main"><img src="images/MAGIC24.jpg" style="width:500px; height:340px; object-fit: cover;"/></span></center>
-						<dt>August</dt>
-						<dd>Publication with the <a href="https://isla-edi.com/">E. K. Campbell group</a> is <a href="https://pubs.aip.org/aip/jcp/article/161/7/074305/3308098/Electronic-and-vibrational-spectroscopy-of">out now</a></dd>
-						<dt>June</dt>
-						<dd>Cate gave an invited talk and panel discussion as part of the <a href="https://updiceproject.com/2024/06/12/women-in-photochemistry-symposium-11-june-2024-ucl/"><em>Women in Photochemistry</em></a> Meeting at UCL, as part of UPDICE</dd>
-						<dt>April</dt>
-						<dd>Paper in collaboration with the <a href="https://www.uni-frankfurt.de/58708118/Group_of_Prof__Dr__Matthias_Wagner">Wagner group</a> out now in <a href="https://pubs.acs.org/doi/full/10.1021/jacs.4c02163"><em>JACS</em>!</a></dd>
-						<dt>January</dt>
-						<dd>First CSA group <a href="https://chemistry-europe.onlinelibrary.wiley.com/doi/full/10.1002/cphc.202300791">paper</a> out now</dd>
-					</dl>
+						<div class="news-month-group">
+							<div class="news-month-label">May</div>
+							<div class="news-entry">
+								Cate took part in <a href="https://pintofscience.co.uk/">Pint of Science</a>'s <a href="https://www.glasgowsciencecentre.org/creative-reactions">Creative Reactions</a> festival, which pairs scientists with local artists. Cate was paired with Glasgow-based artist <a href="https://amusing-handball-242.notion.site/Gabriele-Rossi-Portfolio-2e6fccea9e5c80c8abd9c3f7cd3bd605">Gabriele Rossi</a>, who was inspired to build a sculpture:
+								<blockquote>"An ominous sun god stands over a sea of molecules, bombarding them with high energy rays. The molecules twist and dance while being hit by high energy particles. Will they survive the onslaught or will they break and never be the same again..."</blockquote>
+								<div class="news-image-wrap">
+									<div class="carousel" id="carousel-creative-reactions">
+										<div class="carousel-track" id="carousel-creative-reactions-track">
+											<img src="images/GR1.jpeg" style="height:320px; object-fit:cover;" alt="Creative Reactions 1"/>
+											<img src="images/GR2.jpeg" style="height:320px; object-fit:cover;" alt="Creative Reactions 2"/>
+											<img src="images/GR3.jpeg" style="height:320px; object-fit:cover;" alt="Creative Reactions 3"/>
+										</div>
+										<button class="carousel-btn prev" onclick="moveCarousel('carousel-creative-reactions', -1)">&#8249;</button>
+										<button class="carousel-btn next" onclick="moveCarousel('carousel-creative-reactions', 1)">&#8250;</button>
+									</div>
+									<div class="carousel-dots" id="carousel-creative-reactions-dots"></div>
+								</div>
+							</div>
+							<div class="news-entry">
+								Cate gave a talk at <a href="https://csd11.si/index.html">Computers in Scientific Discovery 11</a> in Kranjska Gora, Slovenia.
+								<div class="news-image-wrap">
+									<img src="images/csd11.jpg" style="width:100%; max-width:480px; height:300px; object-fit:cover;" alt="CSD11"/>
+								</div>
+							</div>
+						</div>
 
-					<h3>2023</h3>
-					<dl>
-						<dt>October</dt>
-						<dd>Beginning of Cate's Christina Miller Fellowship</dd>
-					</dl>
+						<div class="news-month-group">
+							<div class="news-month-label">April</div>
+							<div class="news-entry">
+								New paper with the Matsika group <a href="https://pubs.acs.org/doi/10.1021/acs.jpclett.6c00590">is out now</a> in <em>J. Phys. Chem. Letts</em>!
+								<div class="news-image-wrap">
+									<img src="images/cover.jpg" style="max-width:280px; height:380px; object-fit:cover; border-radius:3px;" alt="JPCL cover"/>
+								</div>
+								Check out Kanishka and Maneesh's cover!
+							</div>
+						</div>
+
+						<div class="news-month-group">
+							<div class="news-month-label">January</div>
+							<div class="news-entry">
+								Cate has been elected as the secretary of the <a href="https://spectroscopyanddynamics.uk/sdg-meeting/">RSC Spectroscopy &amp; Dynamics special interest group</a>.
+							</div>
+							<div class="news-entry">
+								The <a href="https://winterschool.cc/program">12th edition of the Virtual Winter School of Computational Chemistry</a> ran successfully. Find the recorded talks <a href="https://zenodo.org/communities/vwscc/records?q=&l=list&p=1&s=10&sort=newest">here</a>.
+							</div>
+							<div class="news-entry">
+								Cate gave an invited talk at the <a href="https://www.icesaa-4.in/">4<sup>th</sup> International Conference on Excited State Aromaticity and Antiaromaticity (ICESAA-4)</a>, hosted by IISER Thiruvananthapuram.
+								<div class="news-image-wrap">
+									<img src="images/DSC_7309.JPG" style="width:100%; max-width:480px; height:300px; object-fit:cover;" alt="ICESAA-4"/>
+								</div>
+							</div>
+						</div>
+
+					</div><!-- /news-timeline 2026 -->
+
+					<!-- ── 2025 ── -->
+					<div class="news-year-header">
+						<span class="news-year-label">2025</span>
+						<div class="news-year-rule"></div>
+					</div>
+					<div class="news-timeline">
+
+						<div class="news-month-group">
+							<div class="news-month-label">November</div>
+							<div class="news-entry">
+								Paper on perturbing the photochemical landscape of organic sunscreen AVB <a href="https://pubs.acs.org/doi/10.1021/jacs.5c12521">is available online</a> at <em>JACS</em>.
+							</div>
+						</div>
+
+						<div class="news-month-group">
+							<div class="news-month-label">October</div>
+							<div class="news-entry">
+								Cate joined the University of Glasgow as a Lecturer in Physical Chemistry!
+							</div>
+						</div>
+
+						<div class="news-month-group">
+							<div class="news-month-label">August</div>
+							<div class="news-entry">
+								Annie gave an excellent presentation on her summer project work at a summer research symposium.
+								<div class="news-image-wrap">
+									<img src="images/IMG_5655.jpeg" style="width:100%; max-width:480px; height:300px; object-fit:cover;" alt="Summer symposium"/>
+								</div>
+							</div>
+						</div>
+
+						<div class="news-month-group">
+							<div class="news-month-label">June</div>
+							<div class="news-entry">
+								Annie joins the group for a summer project, funded by a Carnegie Scholarship!
+							</div>
+							<div class="news-entry">
+								The VWSCC ran a special one-day event showcasing Q-Chem 6.3. Find the recorded talks <a href="https://zenodo.org/records/15648308">here</a>.
+							</div>
+						</div>
+
+						<div class="news-month-group">
+							<div class="news-month-label">May</div>
+							<div class="news-entry">
+								Cate visited KU Leuven to give a seminar and meet with the <a href="https://chem.kuleuven.be/en/research/qcpc/tue">Jagau group</a>.
+							</div>
+						</div>
+
+						<div class="news-month-group">
+							<div class="news-month-label">April</div>
+							<div class="news-entry">
+								Cate gave an invited talk and panel discussion at the COSMOS programme grant <a href="https://cosmosproject.co.uk/news/ecr_careers_and_science_1/">ECR Workshop: Career Development and Science</a>.
+								<div class="news-image-wrap">
+									<img src="images/cosmos.jpg" style="width:100%; max-width:480px; height:240px; object-fit:cover;" alt="COSMOS workshop"/>
+								</div>
+							</div>
+						</div>
+
+						<div class="news-month-group">
+							<div class="news-month-label">January</div>
+							<div class="news-entry">
+								<a href="https://doi.org/10.1002/cphc.202401069"><em>Perturbing Pentalene</em></a> invited paper is online at <em>ChemPhysChem</em>.
+							</div>
+							<div class="news-entry">
+								The <a href="https://winterschool.cc/program">11th edition of the Virtual Winter School of Computational Chemistry</a> ran successfully. Find the recorded talks <a href="https://zenodo.org/communities/vwscc/records?q=&l=list&p=1&s=10&sort=newest">here</a>.
+							</div>
+							<div class="news-entry">
+								CSA group attended the RSC Spectroscopy and Dynamics Group Meeting in Leicester — Chiara presented a poster and Cate gave an invited talk.
+							</div>
+						</div>
+
+					</div><!-- /news-timeline 2025 -->
+
+					<!-- ── 2024 ── -->
+					<div class="news-year-header">
+						<span class="news-year-label">2024</span>
+						<div class="news-year-rule"></div>
+					</div>
+					<div class="news-timeline">
+
+						<div class="news-month-group">
+							<div class="news-month-label">November</div>
+							<div class="news-entry">
+								Paper in collaboration with the <a href="https://www.ingleson.chem.ed.ac.uk/">Ingleson group</a> is <a href="https://doi.org/10.1002/anie.202419094">out now</a> as a VIP paper in <em>Angewandte</em>.
+							</div>
+							<div class="news-entry">
+								Cate gave a departmental seminar at Newcastle University.
+							</div>
+						</div>
+
+						<div class="news-month-group">
+							<div class="news-month-label">September</div>
+							<div class="news-entry">
+								Cate gave an invited talk at the <a href="https://www.plus.ac.at/magic2024/">5th Workshop on MAGnetically Induced Molecular Currents</a> in Frauenwörth.
+								<div class="news-image-wrap">
+									<img src="images/MAGIC24.jpg" style="width:100%; max-width:480px; height:280px; object-fit:cover;" alt="MAGIC 2024"/>
+								</div>
+							</div>
+						</div>
+
+						<div class="news-month-group">
+							<div class="news-month-label">August</div>
+							<div class="news-entry">
+								Publication with the <a href="https://isla-edi.com/">E. K. Campbell group</a> is <a href="https://pubs.aip.org/aip/jcp/article/161/7/074305/3308098/Electronic-and-vibrational-spectroscopy-of">out now</a> in <em>J. Chem. Phys.</em>
+							</div>
+						</div>
+
+						<div class="news-month-group">
+							<div class="news-month-label">June</div>
+							<div class="news-entry">
+								Cate gave an invited talk and panel discussion at the <a href="https://updiceproject.com/2024/06/12/women-in-photochemistry-symposium-11-june-2024-ucl/"><em>Women in Photochemistry</em></a> Meeting at UCL, as part of UPDICE.
+							</div>
+						</div>
+
+						<div class="news-month-group">
+							<div class="news-month-label">April</div>
+							<div class="news-entry">
+								Paper in collaboration with the <a href="https://www.uni-frankfurt.de/58708118/Group_of_Prof__Dr__Matthias_Wagner">Wagner group</a> out now in <a href="https://pubs.acs.org/doi/full/10.1021/jacs.4c02163"><em>JACS</em></a>.
+							</div>
+						</div>
+
+						<div class="news-month-group">
+							<div class="news-month-label">January</div>
+							<div class="news-entry">
+								First CSA group <a href="https://chemistry-europe.onlinelibrary.wiley.com/doi/full/10.1002/cphc.202300791">paper</a> out now in <em>ChemPhysChem</em>.
+							</div>
+						</div>
+
+					</div><!-- /news-timeline 2024 -->
+
+					<!-- ── 2023 ── -->
+					<div class="news-year-header">
+						<span class="news-year-label">2023</span>
+						<div class="news-year-rule"></div>
+					</div>
+					<div class="news-timeline">
+						<div class="news-month-group">
+							<div class="news-month-label">October</div>
+							<div class="news-entry">
+								Beginning of Cate's Christina Miller Fellowship at the University of Edinburgh.
+							</div>
+						</div>
+					</div>
+
 				</article>
 
-			</div>
+			</div><!-- /#main -->
 
 			<footer id="footer">
 				<p class="copyright">&copy; CSA. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
 			</footer>
 
-		</div>
+		</div><!-- /#wrapper -->
 
 		<div id="bg"></div>
 
@@ -617,6 +862,46 @@
 		<script src="assets/js/breakpoints.min.js"></script>
 		<script src="assets/js/util.js"></script>
 		<script src="assets/js/main.js"></script>
+
+		<script>
+			/* ── CAROUSEL ───────────────────────────────────────────── */
+			function moveCarousel(id, dir) {
+				var track  = document.getElementById(id + '-track');
+				var imgs   = track.querySelectorAll('img');
+				var idx    = parseInt(track.dataset.idx || 0);
+				idx = (idx + dir + imgs.length) % imgs.length;
+				track.dataset.idx = idx;
+				track.style.transform = 'translateX(-' + (idx * 100) + '%)';
+				var dotsEl = document.getElementById(id + '-dots');
+				if (dotsEl) {
+					dotsEl.querySelectorAll('.carousel-dot').forEach(function(d, i) {
+						d.style.opacity = (i === idx) ? '1' : '0.35';
+					});
+				}
+			}
+
+			document.addEventListener('DOMContentLoaded', function () {
+				document.querySelectorAll('.carousel').forEach(function (c) {
+					var id    = c.id;
+					var track = document.getElementById(id + '-track');
+					var imgs  = track.querySelectorAll('img');
+					track.dataset.idx = 0;
+					var dotsEl = document.getElementById(id + '-dots');
+					if (dotsEl) {
+						imgs.forEach(function (_, i) {
+							var dot = document.createElement('span');
+							dot.className = 'carousel-dot';
+							dot.style.opacity = (i === 0) ? '1' : '0.35';
+							dot.addEventListener('click', function () {
+								var diff = i - parseInt(track.dataset.idx);
+								moveCarousel(id, diff === 0 ? 0 : diff);
+							});
+							dotsEl.appendChild(dot);
+						});
+					}
+				});
+			});
+		</script>
 
 	</body>
 </html>
