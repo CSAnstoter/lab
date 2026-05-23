@@ -144,68 +144,8 @@
 				font-style: italic;
 				font-size: 0.88rem;
 			}
-		
-    /* ── EMBEDDED COLLABORATION GRAPH ──────────────────────── */
-    #collab-wrap {
-      position: relative;
-      width: 100%;
-      margin-top: 1rem;
-      border: 1px solid rgba(255,255,255,0.1);
-      border-radius: 6px;
-      overflow: hidden;
-      background: rgba(0,0,0,0.25);
-    }
-    #collab-svg {
-      display: block;
-      width: 100%;
-      height: 420px;
-      cursor: grab;
-    }
-    #collab-svg:active { cursor: grabbing; }
-    .c-link { fill: none; stroke-linecap: round; }
-    .c-link-primary   { stroke: rgba(255,255,255,0.22); }
-    .c-link-secondary { stroke: rgba(255,255,255,0.08); }
-    .c-node { cursor: pointer; }
-    .c-node:hover circle { filter: brightness(1.4); }
-    .c-label { pointer-events: none; text-anchor: middle; dominant-baseline: central; font-family: 'Courier New', monospace; }
-    .c-label-name { font-size: 9px; fill: #fff; font-weight: bold; }
-    .c-label-inst { font-size: 7.5px; fill: rgba(255,255,255,0.5); }
-    #collab-tooltip {
-      position: absolute; pointer-events: none;
-      background: rgba(15,15,18,0.94); border: 1px solid rgba(255,255,255,0.15);
-      border-radius: 5px; padding: 0.45rem 0.7rem; font-size: 0.74rem;
-      line-height: 1.5; max-width: 200px; opacity: 0; transition: opacity 0.15s;
-      backdrop-filter: blur(4px);
-    }
-    #collab-tooltip.c-vis { opacity: 1; }
-    .c-tt-name { font-weight: bold; font-size: 0.8rem; margin-bottom: 0.15rem; }
-    .c-tt-inst { opacity: 0.55; font-size: 0.7rem; margin-bottom: 0.3rem; }
-    .c-tt-n    { font-family: 'Courier New', monospace; font-size: 0.72rem; }
-    .c-tt-dot  { display:inline-block; width:7px; height:7px; border-radius:50%; margin-right:4px; vertical-align:middle; }
-    #collab-controls {
-      position: absolute; top: 0.5rem; right: 0.6rem;
-    }
-    #collab-controls button {
-      background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.15);
-      color: #e8e4de; padding: 0.25rem 0.55rem; border-radius: 4px; cursor: pointer;
-      font-size: 0.68rem; font-family: 'Courier New', monospace;
-    }
-    #collab-controls button:hover { background: rgba(255,255,255,0.14); }
-    #collab-legend {
-      display: flex; flex-wrap: wrap; gap: 0.5rem 1rem;
-      padding: 0.6rem 0.8rem; font-size: 0.68rem;
-      font-family: 'Courier New', monospace; opacity: 0.6;
-      border-top: 1px solid rgba(255,255,255,0.08);
-    }
-    .c-leg { display: flex; align-items: center; gap: 0.4rem; }
-    .c-leg-dot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
-    .c-leg-dot-split {
-      width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0;
-      background: linear-gradient(to right, #a78bde 50%, #22d3ee 50%);
-    }
-	</style>
-	    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.5/d3.min.js"></script>
-</head>
+		</style>
+	</head>
 	<body class="is-preload">
 
 		<div id="wrapper">
@@ -280,35 +220,6 @@
 						</ul>
 						Contact: <a href="mailto:cate.anstoter@glasgow.ac.uk">cate.anstoter[at]glasgow.ac.uk</a>
 					</p>
-
-					<hr style="border:none; border-top:1px solid rgba(255,255,255,0.15); margin:2rem 0 1.5rem;"/>
-					<h3>Collaboration Network</h3>
-					<p style="font-size:0.85rem; opacity:0.7; margin:0.4rem 0 1rem; line-height:1.6;">
-						Nodes represent principal investigators; edge width reflects the number of shared
-						publications. Drag nodes to rearrange, scroll to zoom.
-					</p>
-
-					<div id="collab-wrap">
-						<svg id="collab-svg"></svg>
-						<div id="collab-tooltip">
-							<div class="c-tt-name" id="c-tt-name"></div>
-							<div class="c-tt-inst" id="c-tt-inst"></div>
-							<div class="c-tt-n"    id="c-tt-n"></div>
-						</div>
-						<div id="collab-controls">
-							<button onclick="collabReset()">reset</button>
-						</div>
-						<div id="collab-legend">
-							<div class="c-leg"><div class="c-leg-dot" style="background:#f472b6;"></div> Self</div>
-							<div class="c-leg"><div class="c-leg-dot" style="background:#5b9bd5;"></div> Gas-phase experiment</div>
-							<div class="c-leg"><div class="c-leg-dot" style="background:#a78bde;"></div> Theory / computation</div>
-							<div class="c-leg"><div class="c-leg-dot" style="background:#4caf8a;"></div> Synthesis</div>
-							<div class="c-leg"><div class="c-leg-dot" style="background:#e6a84a;"></div> IR spectroscopy</div>
-							<div class="c-leg"><div class="c-leg-dot" style="background:#22d3ee;"></div> Graph theory</div>
-							<div class="c-leg"><div class="c-leg-dot-split"></div> Theory + Graph theory</div>
-						</div>
-					</div>
-
 				</article>
 
 				<!-- ═══════════ RESEARCH ═══════════ -->
@@ -502,30 +413,19 @@
 						<li>Pallavi Kajrekar (2024, UoE)</li>
 						<li>Ruiqi Jiao (2024, UoE)</li>
 					</ul>
+
 					<hr style="border:none; border-top:1px solid rgba(255,255,255,0.15); margin:2rem 0 1.5rem;"/>
 					<h3>Collaboration Network</h3>
 					<p style="font-size:0.85rem; opacity:0.7; margin:0.4rem 0 1rem; line-height:1.6;">
 						Nodes represent principal investigators; edge width reflects the number of shared
 						publications. Drag nodes to rearrange, scroll to zoom.
 					</p>
-					<div id="collab-wrap">
-						<svg id="collab-svg"></svg>
-						<div id="collab-tooltip">
-							<div class="c-tt-name" id="c-tt-name"></div>
-							<div class="c-tt-inst" id="c-tt-inst"></div>
-							<div class="c-tt-n"    id="c-tt-n"></div>
-						</div>
-						<div id="collab-controls"><button onclick="collabReset()">reset</button></div>
-						<div id="collab-legend">
-							<div class="c-leg"><div class="c-leg-dot" style="background:#f472b6;"></div> Self</div>
-							<div class="c-leg"><div class="c-leg-dot" style="background:#5b9bd5;"></div> Gas-phase experiment</div>
-							<div class="c-leg"><div class="c-leg-dot" style="background:#a78bde;"></div> Theory / computation</div>
-							<div class="c-leg"><div class="c-leg-dot" style="background:#4caf8a;"></div> Synthesis</div>
-							<div class="c-leg"><div class="c-leg-dot" style="background:#e6a84a;"></div> IR spectroscopy</div>
-							<div class="c-leg"><div class="c-leg-dot" style="background:#22d3ee;"></div> Graph theory</div>
-							<div class="c-leg"><div class="c-leg-dot-split"></div> Theory + Graph theory</div>
-						</div>
-					</div>
+					<iframe
+						src="collaboration_network.html"
+						style="width:100%; height:520px; border:1px solid rgba(255,255,255,0.1); border-radius:6px; display:block;"
+						loading="lazy"
+						title="Collaboration Network"
+					></iframe>
 
 				</article>
 
@@ -759,7 +659,7 @@
 								Cate and Chiara will attend the <a href="https://www.aromaticuniverse.space/">Exploring the aromatic universe in the JWST era</a> conference at Western University, London, Ontario, Canada. Chiara will give a poster on her PhD work!
 							</div>
 						</div>
-						
+
 						<div class="news-month-group">
 							<div class="news-month-label">Upcoming — June</div>
 							<div class="news-entry">
@@ -1022,222 +922,6 @@
 					}
 				});
 			});
-		</script>
-
-	
-		<script>
-		/* ── COLLABORATION NETWORK ───────────────────────────────── */
-		(function() {
-			const GROUPS = {
-				self:        '#f472b6',
-				experiment:  '#5b9bd5',
-				theory:      '#a78bde',
-				synthesis:   '#4caf8a',
-				spectro:     '#e6a84a',
-				graphtheory: '#22d3ee',
-			};
-
-			const nodes = [
-				{ id:'CSA',        name:'Anstöter',    inst:'Glasgow',                 group:'self',        papers:53 },
-				{ id:'Verlet',     name:'Verlet',       inst:'Durham',                  group:'experiment',  papers:23 },
-				{ id:'Bull',       name:'Bull',         inst:'East Anglia',             group:'experiment',  papers:10 },
-				{ id:'Dessent',    name:'Dessent',      inst:'York',                    group:'experiment',  papers:6  },
-				{ id:'Matsika',    name:'Matsika',      inst:'Temple',                  group:'theory',      papers:5  },
-				{ id:'Fowler',     name:'Fowler',       inst:'Sheffield',               group:'dual',        papers:4  },
-				{ id:'Curchod',    name:'Curchod',      inst:'Bristol',                 group:'theory',      papers:3  },
-				{ id:'Fedor',      name:'Fedor',        inst:'Heyrovský Inst.',         group:'experiment',  papers:2  },
-				{ id:'Bochenkova', name:'Bochenkova',   inst:'Moscow State',            group:'theory',      papers:2  },
-				{ id:'Bieske',     name:'Bieske',       inst:'Melbourne',               group:'experiment',  papers:2  },
-				{ id:'Stockett',   name:'Stockett',     inst:'Stockholm',               group:'experiment',  papers:2  },
-				{ id:'Campbell',   name:'Campbell',     inst:'Edinburgh',               group:'experiment',  papers:2  },
-				{ id:'Oomens',     name:'Oomens',       inst:'Radboud, Nijmegen',       group:'spectro',     papers:2  },
-				{ id:'Garand',     name:'Garand',       inst:'Wisconsin–Madison',       group:'experiment',  papers:1  },
-				{ id:'Wagner',     name:'Wagner',       inst:'Goethe Universität',      group:'synthesis',   papers:1  },
-				{ id:'Ingleson',   name:'Ingleson',     inst:'Edinburgh',               group:'synthesis',   papers:1  },
-				{ id:'Popelier',   name:'Popelier',     inst:'Manchester',              group:'theory',      papers:1  },
-				{ id:'Rijs',       name:'Rijs',         inst:'VU Amsterdam',            group:'spectro',     papers:1  },
-				{ id:'Wright',     name:'Wright',       inst:'Edinburgh',               group:'synthesis',   papers:1  },
-				{ id:'Klein',      name:'Klein',        inst:'Temple',                  group:'theory',      papers:1  },
-				{ id:'Basic',      name:'Bašić',        inst:'Univ. Primorska',         group:'graphtheory', papers:1  },
-				{ id:'Pisanski',   name:'Pisanski',     inst:'Univ. Primorska',         group:'graphtheory', papers:1  },
-			];
-
-			const links = [
-				{ source:'CSA', target:'Verlet',     weight:23, primary:true },
-				{ source:'CSA', target:'Bull',       weight:10, primary:true },
-				{ source:'CSA', target:'Dessent',    weight:6,  primary:true },
-				{ source:'CSA', target:'Matsika',    weight:5,  primary:true },
-				{ source:'CSA', target:'Fowler',     weight:4,  primary:true },
-				{ source:'CSA', target:'Curchod',    weight:3,  primary:true },
-				{ source:'CSA', target:'Fedor',      weight:2,  primary:true },
-				{ source:'CSA', target:'Bochenkova', weight:2,  primary:true },
-				{ source:'CSA', target:'Bieske',     weight:2,  primary:true },
-				{ source:'CSA', target:'Stockett',   weight:2,  primary:true },
-				{ source:'CSA', target:'Campbell',   weight:2,  primary:true },
-				{ source:'CSA', target:'Oomens',     weight:2,  primary:true },
-				{ source:'CSA', target:'Garand',     weight:1,  primary:true },
-				{ source:'CSA', target:'Wagner',     weight:1,  primary:true },
-				{ source:'CSA', target:'Ingleson',   weight:1,  primary:true },
-				{ source:'CSA', target:'Popelier',   weight:1,  primary:true },
-				{ source:'CSA', target:'Rijs',       weight:1,  primary:true },
-				{ source:'CSA', target:'Wright',     weight:1,  primary:true },
-				{ source:'CSA', target:'Klein',      weight:1,  primary:true },
-				{ source:'CSA', target:'Basic',      weight:1,  primary:true },
-				{ source:'CSA', target:'Pisanski',   weight:1,  primary:true },
-				{ source:'Verlet', target:'Bull',       weight:10, primary:false },
-				{ source:'Verlet', target:'Fedor',      weight:2,  primary:false },
-				{ source:'Verlet', target:'Bochenkova', weight:2,  primary:false },
-				{ source:'Verlet', target:'Bieske',     weight:2,  primary:false },
-				{ source:'Verlet', target:'Stockett',   weight:1,  primary:false },
-				{ source:'Verlet', target:'Curchod',    weight:3,  primary:false },
-				{ source:'Fedor',  target:'Bochenkova', weight:1,  primary:false },
-				{ source:'Matsika',target:'Garand',     weight:1,  primary:false },
-				{ source:'Matsika',target:'Klein',      weight:1,  primary:false },
-				{ source:'Dessent',target:'Oomens',     weight:1,  primary:false },
-				{ source:'Dessent',target:'Rijs',       weight:1,  primary:false },
-				{ source:'Oomens', target:'Campbell',   weight:1,  primary:false },
-				{ source:'Bull',   target:'Bieske',     weight:2,  primary:false },
-				{ source:'Bull',   target:'Stockett',   weight:2,  primary:false },
-				{ source:'Bull',   target:'Campbell',   weight:1,  primary:false },
-				{ source:'Bull',   target:'Curchod',    weight:1,  primary:false },
-				{ source:'Fowler', target:'Basic',      weight:1,  primary:false },
-				{ source:'Fowler', target:'Pisanski',   weight:1,  primary:false },
-				{ source:'Basic',  target:'Pisanski',   weight:1,  primary:false },
-			];
-
-			function init() {
-				const wrap = document.getElementById('collab-wrap');
-				const svgEl = document.getElementById('collab-svg');
-				if (!wrap || !svgEl || typeof d3 === 'undefined') return;
-
-				const W = () => { const w = wrap.clientWidth; return w > 0 ? w : 480; };
-				const H = () => 420;
-
-				const svg = d3.select(svgEl).attr('width', W()).attr('height', H());
-
-				// Gradient def for Fowler
-				const defs = svg.append('defs');
-				const fg = defs.append('linearGradient').attr('id','fowler-g2')
-					.attr('x1','0%').attr('x2','100%').attr('y1','0%').attr('y2','0%');
-				fg.append('stop').attr('offset','50%').attr('stop-color','#a78bde');
-				fg.append('stop').attr('offset','50%').attr('stop-color','#22d3ee');
-
-				const zoom = d3.zoom().scaleExtent([0.2,5])
-					.on('zoom', e => g.attr('transform', e.transform));
-				svg.call(zoom);
-
-				window.collabReset = function() {
-					svg.transition().duration(600).call(
-						zoom.transform, d3.zoomIdentity.translate(W()/2, H()/2).scale(0.78)
-					);
-				};
-
-				const g = svg.append('g');
-
-				const maxW = d3.max(links.filter(l=>l.primary), d=>d.weight);
-				const ss = d3.scaleSqrt().domain([1,maxW]).range([1,8]);
-				const maxP = d3.max(nodes.filter(d=>d.id!=='CSA'), d=>d.papers);
-				const nr = d => d.id==='CSA' ? 22 : 8 + (d.papers/maxP)*14;
-				const nc = d => d.group==='dual' ? 'url(#fowler-g2)' : (GROUPS[d.group]||'#888');
-
-				const sim = d3.forceSimulation(nodes)
-					.force('link', d3.forceLink(links).id(d=>d.id)
-						.distance(d => !d.primary ? 70 : d.weight>=15 ? 110 : d.weight>=5 ? 150 : d.weight>=2 ? 180 : 200)
-						.strength(d => d.primary ? 0.55 : 0.08))
-					.force('charge', d3.forceManyBody().strength(d=>d.id==='CSA'?-700:-200))
-					.force('center', d3.forceCenter(0,0))
-					.force('collision', d3.forceCollide().radius(d=>nr(d)+16));
-
-				const secE = g.append('g').selectAll('line')
-					.data(links.filter(l=>!l.primary)).join('line')
-					.attr('class','c-link c-link-secondary')
-					.attr('stroke-width', d=>Math.max(0.4,ss(d.weight)*0.35));
-
-				const primE = g.append('g').selectAll('line')
-					.data(links.filter(l=>l.primary)).join('line')
-					.attr('class','c-link c-link-primary')
-					.attr('stroke-width', d=>ss(d.weight));
-
-				const ng = g.append('g').selectAll('g')
-					.data(nodes).join('g').attr('class','c-node')
-					.call(d3.drag()
-						.on('start',(e,d)=>{if(!e.active)sim.alphaTarget(0.3).restart();d.fx=d.x;d.fy=d.y;})
-						.on('drag', (e,d)=>{d.fx=e.x;d.fy=e.y;})
-						.on('end',  (e,d)=>{if(!e.active)sim.alphaTarget(0);d.fx=null;d.fy=null;}));
-
-				ng.append('circle').attr('r', nr).attr('fill', nc)
-					.attr('fill-opacity', d=>d.id==='CSA'?1:0.84)
-					.attr('stroke', d=>{ try{ return d3.color(d.group==='dual'?'#a78bde':GROUPS[d.group]).brighter(0.5); }catch(e){ return '#fff'; }})
-					.attr('stroke-width',1.4).attr('stroke-opacity',0.55);
-
-				ng.append('text').attr('class','c-label c-label-name')
-					.attr('dy', d=>(d.papers>=4||d.id==='CSA')?'-0.3em':'0')
-					.text(d=>d.name);
-
-				ng.filter(d=>d.papers>=4||d.id==='CSA').append('text')
-					.attr('class','c-label c-label-inst').attr('dy','0.85em').text(d=>d.inst);
-
-				// Tooltip
-				const tt  = document.getElementById('collab-tooltip');
-				ng.on('mouseover', function(e,d){
-					const col = d.group==='dual'?'#a78bde':(GROUPS[d.group]||'#888');
-					document.getElementById('c-tt-name').innerHTML =
-						'<span class="c-tt-dot" style="background:'+col+'"></span>'+d.name;
-					document.getElementById('c-tt-inst').textContent = d.inst;
-					if(d.id==='CSA'){
-						document.getElementById('c-tt-n').textContent='Principal Investigator';
-					} else {
-						const lk=links.find(l=>l.primary&&(
-							((l.source.id||l.source)==='CSA'&&(l.target.id||l.target)===d.id)||
-							((l.source.id||l.source)===d.id &&(l.target.id||l.target)==='CSA')));
-						const n=lk?lk.weight:d.papers;
-						document.getElementById('c-tt-n').textContent=n+' shared publication'+(n!==1?'s':'');
-					}
-					tt.classList.add('c-vis');
-				})
-				.on('mousemove', function(e){
-					const r=wrap.getBoundingClientRect();
-					let tx=e.clientX-r.left+12, ty=e.clientY-r.top-8;
-					if(tx+210>W()) tx-=220;
-					tt.style.left=tx+'px'; tt.style.top=ty+'px';
-				})
-				.on('mouseout',()=>tt.classList.remove('c-vis'));
-
-				sim.on('tick',()=>{
-					primE.attr('x1',d=>d.source.x).attr('y1',d=>d.source.y)
-					     .attr('x2',d=>d.target.x).attr('y2',d=>d.target.y);
-					secE.attr('x1',d=>d.source.x).attr('y1',d=>d.source.y)
-					    .attr('x2',d=>d.target.x).attr('y2',d=>d.target.y);
-					ng.attr('transform',d=>'translate('+d.x+','+d.y+')');
-				});
-
-				// Initial centre (uses fallback width if article hidden)
-				svg.call(zoom.transform, d3.zoomIdentity.translate(W()/2, H()/2).scale(0.78));
-
-				// Re-run when #group tab is opened
-				window.addEventListener('hashchange', function() {
-					if (window.location.hash === '#group') {
-						const realW = wrap.clientWidth;
-						if (realW > 0) svg.attr('width', realW);
-						sim.alpha(0.5).restart();
-						setTimeout(function() {
-							svg.call(zoom.transform,
-								d3.zoomIdentity.translate(W()/2, H()/2).scale(0.78));
-						}, 300);
-					}
-				});
-			}
-
-			// Robust init: retry until D3 and DOM are both ready
-			function tryInit() {
-				if (typeof d3 === 'undefined' || !document.getElementById('collab-wrap')) {
-					setTimeout(tryInit, 80);
-					return;
-				}
-				init();
-			}
-			document.addEventListener('DOMContentLoaded', tryInit);
-		})();
 		</script>
 
 	</body>
