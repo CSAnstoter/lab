@@ -5,700 +5,618 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
 <html>
-	<!-- 	This is the "Head" of the HTML document.
-		It contains information that isn't displayed on the actual page, but is useful
-		for the web browser when loading the page	
-	-->
 	<head>
-		<!-- This is the title of the page. It is the text that appears inside this pages tab in your web browser -->
 		<title>Anstöter Lab</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<!-- 	This links to this page's CSS, which is contained in the folder assets/css and the file main.css.
-			 If you want to edit the styling of this page, you should edit the file assets/css/main.css
-			 If you have a new CSS file you'd like to add with custom styling, you should link to it here using:
-			 <link rel="stylesheet" href="assets/css/my-new-css-file.css"/> 
-		-->
 		<link rel="stylesheet" href="assets/css/main.css" />
-		<!-- 	In the case that the user's browser does not support JavaScript (unlikely, but possible), the page
-			will load a separate set of CSS stylings from the file assets/css/noscript.css
-			Any HTML contained inside <noscript></noscript> tags will be loaded in the event that JavaScript is not
-			available. 
-		-->
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 	</head>
-	<!-- The body is the location where your site's content will go -->
 	<body class="is-preload">
 
-			<!-- This "div" wraps around all of our content and just changes how things are layed out -->
-			<div id="wrapper">
+		<div id="wrapper">
 
-					<!-- This is where the content that appears on page load exists -->
-					<header id="header">
-						<!-- This is the main content of the front page -->
-						<div class="content">
-							<div class="inner">
-								<!-- Here is a heading where you can put your name -->
-								<h1>
-									Anstöter Research Group
-								</h1>
-								<!-- 	Here is an image where you can put a picture of you. 
-									You can change the width and height attributes below to change how large
-									your image is.
+			<header id="header">
+				<div class="content">
+					<div class="inner">
+						<h1>Anstöter Research Group</h1>
+						<img src="images/frontpage.png" style="width:600px; height:150px; object-fit: cover;">
+						<p>
+							Electron Dominated Phenomena <br>
+							University of Glasgow <br> Scotland
+						</p>
+					</div>
+				</div>
+				<nav>
+					<ul>
+						<li><a href="#about">About</a></li>
+						<li><a href="#research">Research</a></li>
+						<li><a href="#group">Group</a></li>
+						<li><a href="#publications">Publications</a></li>
+						<li><a href="#news">News</a></li>
+					</ul>
+				</nav>
+			</header>
 
-									Try adding "border-radius: 50%;" to the style attribute.
-								-->
-							
-								<img src="images/frontpage.png" style="width:600px; height:150px; object-fit: cover;">
-									<!-- img src="images/Edinburgh Skyline-0097 [Chris Close].jpg" style="width:400px; height:280px; object-fit: cover;">
-								<!-- 	Here is a paragraph where you can put your position and institution, or
-									a short line about yourself.
-								-->
-								<p>
-									Electron Dominated Phenomena <br>
-									University of Glasgow <br> Scotland
-								
-							<!-- img src="images/UoE_nobg.jpg" style="width:75px; height:75px; object-fit: cover;"></p> -->
-							</div>
-						</div>
-						<!-- This is the navigation menu -->
-					<nav>
-							<!-- This element makes an "Unordered List" -->
-							<ul>
-								<!-- This is a "List Item" -->
-								<li>
-									<!-- 	Note that this links to #about, which will move the page to wherever
-										the element with the id "about" exists.
-									-->
-									<a href="#about">About</a>
-								</li>
-								<li>
-									<a href="#research">Research</a>
-								</li>
-								<li>
-									<a href="#group">Group</a>
-								</li>
-								<li>
-									<a href="#publications">Publications</a>
-								</li>
-								<li>
-									<a href="#news">News</a>
-								</li>
-								<!-- 	You can add another button to your navigation menu by adding
-									another List Item with a link inside of it.
-								-->
-								<!-- <li>
-									<a href="images/Astronomy.jpg">My CV</a>
-								</li> -->
-							</ul>
-						</nav>
-					</header>
+			<div id="main">
 
-					<!-- These are the "cards" that appear when you click the buttons on the main page -->
-					<div id="main">
-						<!-- 	Here is the "About Me" card. Note it has the id "about", which the previous 
-							button links to.
-						-->
-						<article id="about">
-													<span class="image">
-							<center>	<img src="images/csa.jpeg" style="width:150px; height:180px;" class="center"/></center>
-						</span>
-							<h2 class="major">Cate S. Anstöter</h2>
-							<h3>Lecturer in Physical Chemistry</h3><br>
-							
-							<p>
-							
-							Cate is (currently) a theoretical and computational chemist with a PhD in experimental physical chemistry (Durham University, 2019). 
-							She is a lecturer in physical chemistry at the University of Glasgow, having previously held a Christina Miller Research Fellowship at the School of Chemistry, University of Edinburgh.
-							Her research combines <i>ab initio</i> electronic structure methods and semi-empirical models to calculate and rationalise the structure-property-charge relationship of organic molecules and understand photon and electron driven chemical physics. 						
-							<!-- Here is an image that you can customize for this page -->
-							<br><br>
-							Her expertise ranges from frequency-, time- and angle-photoelectron imaging of anions, to developing theoretical/computational protocols to interpret experimental signatures of molecular anions, 
-							to modelling the aromaticity of charged heterocycles. 
-							Her work combining theory and experiment has significantly advanced understanding of the excited (metastable) states of molecular anions. She developed and benchmarked protocols to extract structural information from the 
-							photoelectron angular distributions of anions. 
-						<br>
-							<br>
+				<!-- ABOUT -->
+				<article id="about">
+					<span class="image">
+						<center><img src="images/csa.jpeg" style="width:150px; height:180px;" class="center"/></center>
+					</span>
+					<h2 class="major">Cate S. Anstöter</h2>
+					<h3>Lecturer in Physical Chemistry</h3><br>
+					<p>
+						Cate is (currently) a theoretical and computational chemist with a PhD in experimental physical chemistry (Durham University, 2019).
+						She is a lecturer in physical chemistry at the University of Glasgow, having previously held a Christina Miller Research Fellowship at the School of Chemistry, University of Edinburgh.
+						Her research combines <i>ab initio</i> electronic structure methods and semi-empirical models to calculate and rationalise the structure-property-charge relationship of organic molecules and understand photon and electron driven chemical physics.
+						<br><br>
+						Her expertise ranges from frequency-, time- and angle-photoelectron imaging of anions, to developing theoretical/computational protocols to interpret experimental signatures of molecular anions,
+						to modelling the aromaticity of charged heterocycles.
+						Her work combining theory and experiment has significantly advanced understanding of the excited (metastable) states of molecular anions. She developed and benchmarked protocols to extract structural information from the
+						photoelectron angular distributions of anions.
+						<br><br>
+						More recently, CSA's research has expanded to developing ab initio methods to calculate and rationalise ring-currents of complex organic compounds.
+						Combining her knowledge of molecular anions with fundamental physical organic theory, she has developed protocols for calculating the aromatic signatures of redox-active aromatic switches.
+					</p>
+					<p>
+						<h3>About:</h3>
+						<ul>
+							<li><b>2025-present:</b> Lecturer, (University of Glasgow)</li>
+							<li><b>2023-2025:</b> Christina Miller Fellow, (University of Edinburgh)</li>
+							<li><b>2022-2023:</b> Senior PDRA, <a href="https://dessentlab.wixsite.com/dessentlab">Dessent group</a> (University of York)</li>
+							<li><b>2020-2021:</b> Postdoctoral Fellow, <a href="https://www.matsikalab.org/">Matsika group</a> (Temple University)</li>
+							<li><b>2018:</b> Invited Researcher, <a href="https://qpd.chem.msu.ru/">Bochenkova group</a> (Moscow State University)</li>
+							<li><b>2015-2019:</b> PhD, <a href="http://www.durhamchemicaldynamics.com/people.html">Verlet group</a> (Durham University)</li>
+							<li><b>2014-2015:</b> MPhil, <a href="https://www.qct.manchester.ac.uk/team/paul-popelier/">Popelier group</a> (University of Manchester)</li>
+							<li><b>2010-2014:</b> MChem (University of Sheffield)</li>
+						</ul>
+						<h3>Awards and Fellowships:</h3>
+						<ul>
+							<li><b>2023:</b> Christina Miller Research Fellowship (University of Edinburgh)</li>
+							<li><b>2020:</b> Ken Wade Prize for Outstanding Thesis (Durham University)</li>
+							<li><b>2014:</b> Peter Maitlis Research Prize (University of Sheffield)</li>
+						</ul>
+						<h3>Additional:</h3>
+						<ul>
+							<li><b>2026-present:</b> Secretary, <a href="https://spectroscopyanddynamics.uk/">RSC Spectroscopy and Dynamics Special Interest Group</a></li>
+							<li><b>2024-present:</b> Chair, <a href="https://winterschool.cc/">Virtual Winter School of Computational Chemistry</a></li>
+							<li><b>2021-2024:</b> Committee member, <a href="https://winterschool.cc/">Virtual Winter School of Computational Chemistry</a></li>
+						</ul>
+						Contact: <a href="mailto:cate.anstoter@glasgow.ac.uk">cate.anstoter[at]glasgow.ac.uk</a>
+					</p>
+				</article>
 
-							More recently, CSA’s research has expanded to developing ab initio methods to calculate and rationalise ring-currents of complex organic compounds. 
-								Combining her knowledge of molecular anions with fundamental physical organic theory, she has developed protocols for calculating the aromatic signatures of redox-active aromatic switches. 
-							</p>
-													<!-- Here are three paragraphs where you can fill out information about yourself -->
-							<p>
-								<!-- Items contained in <b> tags are bolded! -->
-								<h3>About:</h3>
-								<ul><li><b>2025-present:</b> Lecturer, (University of Glasgow)</li>
-									<li><b>2023-2025:</b> Christina Miller Fellow, (University of Edinburgh)</li>
-									<li><b>2022-2023:</b> Senior PDRA, <a href="https://dessentlab.wixsite.com/dessentlab">Dessent group</a> (University of York)</li>
-									<li><b>2020-2021:</b> Postdoctoral Fellow, <a href="https://www.matsikalab.org/">Matsika group</a> (Temple University)</li>
-									<li><b>2018:</b> Invited Researcher, <a href="https://qpd.chem.msu.ru/">Bochenkova group</a> (Moscow State University)</li>
-									<li><b>2015-2019:</b> PhD, <a href="http://www.durhamchemicaldynamics.com/people.html">Verlet group</a> (Durham University)</li>
-									<li><b>2014-2015:</b> MPhil, <a href="https://www.qct.manchester.ac.uk/team/paul-popelier/">Popelier group</a> (University of Manchester) </li>
-									<li><b>2010-2014:</b> MChem (University of Sheffield)</li>
-									</ul>
-						
-								<h3>Awards and Fellowships:</h3><ul>
-									<li><b>2023:</b> Christina Miller Research Fellowship (University of Edinburgh)</li>
-									<li><b>2020:</b> Ken Wade Prize for Outstanding Thesis (Durham University)</li>
-									<li><b>2014:</b> Peter Maitlis Research Prize (University of Sheffield) </li>
-								</ul>
+				<!-- RESEARCH -->
+				<article id="research">
+					<h2 class="major">Research</h2>
 
-							<h3>Additional:</h3><ul>
-								<li><b>2026-present:</b> Secretary, <a href="https://spectroscopyanddynamics.uk/">RSC Spectroscopy and Dynamics Special Interest Group</a></li>
-									<li><b>2024-present:</b> Chair, <a href="https://winterschool.cc/">Virtual Winter School of Computational Chemistry</a></li>
-								<li><b>2021-2024:</b> Committee member, <a href="https://winterschool.cc/">Virtual Winter School of Computational Chemistry</a></li>
-								</ul>
-							
-							Contact: <a href= "mailto:canstote@ed.ac.uk">cate.anstoter[at]glasgow.ac.uk</a>
-							</p>
-							
-						</article>
+					<!-- ── SECTION 1: METASTABLE ANIONS ─────────────────────── -->
+					<h3>Metastable Anions and Electron-Driven Reactivity</h3>
 
-						<!-- Here is the "Research" card. -->
-						<article id="research">
-								<h2 class="major">Research</h2>
-							
-						
-							<p>	
-								<h3>Metastable Anions and Electron-Driven Reactivity</h3>
-									<center><span class="image main">
-								<img src="images/epdriven.png" style="width:400px; height:280px; object-fit: cover;"/>
-							</span></center><br>
+					<center><span class="image main">
+						<img src="images/epdriven.png" style="width:400px; height:280px; object-fit: cover;"/>
+					</span></center><br>
 
-								Electron-driven processes are ubiquitous in chemistry and biology. When an electron attaches to a neutral molecule, it forms a negatively charged species, <i>an anion</i>,
-								that is typically destabilised. Many such states are metastable resonances, 
-								existing in a precarious balance: coupled to the neutral molecule and a free electron, they are susceptible to spontaneously ejecting that electron in a process called autodetachment. Yet despite this instability, 
-								metastable anion resonances are
-								known to drive a remarkable range of chemical reactions. Understanding, and ultimately controlling, the interplay between autodetachment and productive electron-driven reactivity remains one of the central open challenges in physical chemistry.<br>
-Our group develops and extends electronic structure methods capable of modelling the energetics and lifetimes of these elusive species, with a particular focus on non-Hermitian quantum chemical approaches uniquely suited to 
-								the complex-valued energetics of resonance states. These methods were recently applied to model the autodetachment lifetimes of the open-shell tetracene anion, in collaboration with the <a href="https://garand.chem.wisc.edu/">Garand group</a>. A key goal of 
-								our ongoing programme is to extend these treatments beyond simple one-particle (shape) resonances to two-particle-one-hole and other correlated resonance states, and to apply them to larger molecular systems of chemical 
-								and biological relevance. A further dimension of our work concerns how the environment modulates these processes: in collaboration with the <a href="https://www.matsikalab.org/"> Matsika group</a>, we have recently shown that microsolvation can fundamentally alter 
-								the character of a resonance, 
-								shifting it from a short-lived shape resonance to a longer-lived Feshbach state, with direct consequences for the competition between autodetachment, bond cleavage, and energy redistribution into the solvent.
-													
+					<p>
+						Electron-driven processes are ubiquitous in chemistry and biology. When an electron attaches
+						to a neutral molecule, it forms a negatively charged species — <em>an anion</em> — that is
+						typically destabilised. Many such states are <strong>metastable resonances</strong>, existing
+						in a precarious balance: coupled to the neutral molecule and a free electron, they are
+						susceptible to spontaneously ejecting that electron in a process called autodetachment. Yet
+						despite this instability, metastable anion resonances are known to drive a remarkable range
+						of chemical reactions. Understanding, and ultimately controlling, the interplay between
+						autodetachment and productive electron-driven reactivity remains one of the central open
+						challenges in physical chemistry.
+					</p>
+					<p>
+						Our group develops and extends electronic structure methods capable of modelling the
+						energetics and lifetimes of these elusive species, with a particular focus on
+						<strong>non-Hermitian quantum chemical approaches</strong> uniquely suited to the
+						complex-valued energetics of resonance states. These methods were recently applied to model
+						the autodetachment lifetimes of the open-shell tetracene anion, in collaboration with the
+						<a href="https://garand.chem.wisc.edu/">Garand group</a>. A key goal of our ongoing
+						programme is to extend these treatments beyond simple one-particle (shape) resonances to
+						two-particle-one-hole and other correlated resonance states, and to apply them to larger
+						molecular systems of chemical and biological relevance. A further dimension of our work
+						concerns how the <strong>environment modulates these processes</strong>: in collaboration
+						with the <a href="https://www.matsikalab.org/">Matsika group</a>, we have recently shown
+						that microsolvation can fundamentally alter the character of a resonance — shifting it from
+						a short-lived shape resonance to a longer-lived Feshbach state — with direct consequences
+						for the competition between autodetachment, bond cleavage, and energy redistribution into
+						the solvent.
+					</p>
 
-							<br><br>
-							<h3>Related publications</h3>
-								<ul>
-									<li> <a href="https://pubs.acs.org/doi/10.1021/acs.jpclett.6c00590"><i>Revisiting the Nature of Low-Lying π Resonances in Micro-solvated Uracil</i></a><br>
-										Kanishka Vidanelay, Maneesh Pyla,  <b>Cate S. Anstöter</b> and Spiridoula Matsika<br>
-										<b>2026</b>, <i>J. Phys. Chem. Letts</i>, 17, 4561 <br>
-								
-										</li><br>
-									<li> <a href="https://pubs.aip.org/aip/jcp/article/161/7/074305/3308098"><i>Electronic and vibrational spectroscopy of benzonitrile cation for astrochemical consideration</i></a><br>
-									Francis C. Daly, Thomas E. Douglas-Walker, Julianna Palotás, <b>Cate S. Anstöter</b>, Angel Zheng, Ewen K. Campbell<br>
-									<b>2024</b>, <i>J. Chem. Phys.</i>, 161, 074305
-									</li><br>
-									<li> <a href="https://pubs.aip.org/aip/jcp/article/158/24/241101/2897719"><i>Autoionization from the Plasmon Resonance in Isolated 1-Cyanonaphthalene</i></a><br>
-										James N. Bull, Paola Bolognesi, <b>Cate S. Anstöter</b>, Eleanor K. Ashworth, José E. Navarro Navarrete, Boxing Zhu, Robert Richter, Nitish Pal, Jacopo Chiarinelli, Lorenzo Avaldi, Henning Zettergren & Mark H. Stockett <br>
-										<b>2023</b>, <i>J. Chem. Phys.</i>, 158, 241101
-										</li><br>
-									<li> <a href="https://pubs.acs.org/doi/full/10.1021/acs.jpclett.2c02931"><i>Spectroscopy and Theoretical Modeling of Tetracene Anion Resonances</i></a><br>
-									Cole R. Sagan, <b>Cate S. Anstöter</b><sp>*</sp>, Mushir Thodika, Kenneth D. Wilson, Spiridoula Matsika, & Etienne Garand<br>
-									<b>2022</b>, <i>J. Phys. Chem. Letts</i>, 13, 10245
-									</li><br>
-								
-								</ul>	
-							</p>
-							<p>
-								<h3>The Magnetic Fingerprints of Aromaticity</h3>
-									<span class="image">
-								<center><img src="images/arom.png" style="width:480px; height:380px; object-fit: cover;"/>
-							</span></center><br>
-													
-							<br><br>
-								<h3>Related publications</h3>
-								<ul>
-									<li> <a href="https://chemistry-europe.onlinelibrary.wiley.com/doi/abs/10.1002/cphc.202401069"><i>Perturbing Pentalene: Aromaticity and Antiaromaticity in a Non‐alternant Polycyclic Aromatic Hydrocarbon and BN‐heteroanalogues</i></a><br>
-										 <b>Cate S. Anstöter</b><sp>*</sp> & Patrick W. Fowler<br>
-										<b>2025</b>, <i>ChemPhysChem</i>, Available online
-										</li><br>
-									<li> <a href="https://onlinelibrary.wiley.com/doi/full/10.1002/anie.202419094"><i>A Base-Free Two-Coordinate Oxoborane</i></a><br>
-										Clement R. P. Millet, Dominic R. Willcox, Gary S. Nichol,  <b>Cate S. Anstöter</b> & Michael J. Ingleson<br>
-										<b>2024</b>, <i>Angewandte Chemie</i>, 65, e202419094
-										</li><br>
-									<li> <a href="https://pubs.acs.org/doi/full/10.1021/jacs.4c02163"><i>Tetramerization of BEB-Doped Phenalenyls to Obtain (BE)<sb>8</sb>-[16]Annulenes (E = N, O)</i></a><br>
-										Alexander S. Scholz, Michael Bolte, Alexander Virovets, Eugenia Peresypkina, Hans-Wolfram Lerner,  <b>Cate S. Anstöter</b><sp>*</sp> & Matthias Wagner<br>
-										<b>2024</b>, <i>JACS</i>, 146, 12100
-										</li><br>
-									<li> <a href="https://chemistry-europe.onlinelibrary.wiley.com/doi/full/10.1002/cphc.202300791"><i>Tuning (Anti) Aromaticity: Variations on the [8]‐Circulene Framework</i></a><br>
-										Patrick W. Fowler &  <b>Cate S. Anstöter</b><sp>*</sp> <br>
-										<b>2024</b>, <i>ChemPhysChem</i>, 25, e202300791
-										</li><br>
-								
-								</ul>	
-							</p>
-							
-						</article>
-
-						<!-- Here is the "Community" card. -->
-						<article id="group">
-								<h2 class="major">Group</h2>
-							<p>
-								<img src="images/chiara.JPG" style="width:200px; height:180px; object-fit: cover;">
-								<br>
-								<b>Chiara Beldì</b>
-								<br> <i>PhD student</i> (2024-2027)
-								<br> 
-								Bio: Chiara completed her master’s degree in Physics and Astronomy at the University of Glasgow. In her master’s project, 
-								she studied the chemistry of hydrocarbons in interstellar space using a chemical kinetics simulation. Following this experience, 
-								she developed an interest in computational astrochemistry and joined the group as a PhD student in 2024. Chiara is co-supervised by <a href="https://isla-edi.com/author/ewen-k.-campbell/">Dr. Ewen K. Campbell</a>.
-								Her research centres on the computational modelling of astrochemically-relevant molecules and their interactions with electrons, with a particular focus on molecular anions.
-							</p>
-							
-							
-							<br>
-							<h2>Alumni</h2>
-							<p>
-								<img src="images/ash_photo.jpg" style="width:200px; height:180px; object-fit: cover;">
-								<br>
-								<b>Ashutosh Jadhav</b>
-								<br> <i>MRes student</i> (2024-2025)
-								<br> 
-								Bio: Ashutosh received a Master's degree in Analytical Chemistry, complemented by a Postgraduate Diploma in Regulatory Affairs, from the University of Mumbai, India. 
-								He is co-supervised by Prof. Anita Jones, and his research project is focussed on exploring an innovative fluorescent nucleobase analog, ABN. 
-								This project aims to use computational chemistry to understand the excited states of ABN, specifically the fluorescence properties and solvent assisted excited state proton transfer.
-								
-							</p>
-							<p>
-							<br>
-									<img src="images/Annie.jpg" style="width:200px; height:180px; object-fit: cover;">
-								<br>
-								<b>Annie Hunter</b>
-								<br> <i>Carnegie Trust Intern</i> (Summer 2025)
-								<br>
-								Bio: Originally from Spain, Annie began her MChem degree at the University of Edinburgh in 2022. 
-								She is currently a third year student with a particular interest in molecular orbital theory 
-								and in the early stages of a summer internship investigating the (anti)aromaticity of PAHs containing heavier atoms with Cate, for which she is funded by the Carnegie Trust.
-							</p>
-							
-							<h3>Project Students</h3>
-							<ul>
-								<li>Yi Xu (2025, UoE)</li>
-								<li>Pallavi Kajrekar (2024, UoE)</li>
-								<li>Ruiqi Jiao (2024, UoE)</li>
-							</ul>
-							
-						</article>
-
-						<!-- Here is a the "Contact" card. -->
-						<article id="publications">
-
-							<h2 class="major">Publications</h2>
-
-							Link to CSA's Google Scholar is <a href="https://scholar.google.com/citations?user=pne9pIwAAAAJ&hl=en">here</a> <br>
-					
-							<p>
-								
-
-								<!-- Items contained in <b> tags are bolded! -->
-									<ol reversed>
-									<li> <a href="https://pubs.rsc.org/en/content/articlelanding/2026/cp/d6cp00593d"><i>Gas-Phase Spectroscopy of H<sub>2</sub>O@C<sub>60</sub><sup>+</sup> and H<sub>2</sub>O@C<sub>60</sub><sup>+</sup>H in the Mid-Infrared: The Challenges of Searching for Endohedral Fullerenes in Space</i></a><br>
-										Olivia O’Neill, Julianna Palotás, Thomas E. Douglas-Walker, Cate S. Anstöter, Richard J. Whitby, Malcolm H. Levitt, Giel Berden, Jos Oomens & Ewen K. Campbell<br>
-										<b>2026</b>, <i>PCCP</i>, 28, 9594
-										</li><br>
-
-										<li> <a href="https://pubs.acs.org/doi/10.1021/acs.jpclett.6c00590"><i>Revisiting the Nature of Low-Lying π Resonances in Micro-solvated Uracil</i></a><br>
-										Kanishka Vidanelay, Maneesh Pyla, Cate S. Anstöter and Spiridoula Matsika<br>
-										<b>2026</b>, <i>J. Phys. Chem. Letts</i>, 17, 4561 <br>
-											<a href="https://pubs.acs.org/cms/10.1021/jpclcd.2026.17.issue-15/asset/jpclcd.2026.17.issue-15.xlargecover-2.jpg"><i>Check out Kanishka and Maneesh's cover here!</i></a>
-										</li><br>
-										
-											<li> <a href="https://chemrxiv.org/engage/chemrxiv/article-details/6894c11ffc5f0acb522999e0"><i>Localising Multiple Spin-Charge States in Bridgehead-to-peri Annulated Triptycenes</i></a><br>
-										Stefan Warrington, Antti-Pekka Miikael Reponen, Tejas Deshpande, Tamsin Carolan, Eleanor Dodd, Simon Coles, Cate S. Anstöter, Sascha Feldmann & Iain Wright <br>
-										<b>2025</b>, <i>ChemRxiv</i>
-										</li><br>
-
-
-						<li> <a href="https://pubs.acs.org/doi/10.1021/jacs.5c12521"><i>Disrupting the Photochemical Landscape of a β-Diketone via Electrostatic Perturbation of Ground-State Tautomers</i></a><br>
-										Cate S. Anstöter, Sarah Wilson, Natalie G. K. Wong, Giel Berden, Jos Oomens, Anouk Rijs & Caroline Dessent <br>
-										<b>2025</b>, <i>JACS</i>, 147, 45999–46007
-										</li><br>
-
-										
-									<li> <a href="https://chemistry-europe.onlinelibrary.wiley.com/doi/abs/10.1002/cphc.202401069"><i>Perturbing Pentalene: Aromaticity and Antiaromaticity in a Non‐alternant Polycyclic Aromatic Hydrocarbon and BN‐heteroanalogues</i></a><br>
-										Cate S. Anstöter<sp>*</sp> & Patrick W. Fowler<br>
-										<b>2025</b>, <i>ChemPhysChem</i>, 26, e202401069
-										</li>
-											<br>		
-																	
-									<li> <a href="https://onlinelibrary.wiley.com/doi/full/10.1002/anie.202419094"><i>A Base-Free Two-Coordinate Oxoborane</i></a><br>
-										Clement R. P. Millet, Dominic R. Willcox, Gary S. Nichol, Cate S. Anstöter & Michael J. Ingleson<br>
-										<b>2024</b>, <i>Angewandte Chemie</i>, 65, e202419094
-										</li><br>
-									<li> <a href="https://pubs.aip.org/aip/jcp/article/161/7/074305/3308098"><i>Electronic and vibrational spectroscopy of benzonitrile cation for astrochemical consideration</i></a><br>
-										Francis C. Daly, Thomas E. Douglas-Walker, Julianna Palotás, Cate S. Anstöter, Angel Zheng, Ewen K. Campbell<br>
-										<b>2024</b>, <i>J. Chem. Phys.</i>, 161, 074305
-										</li><br>
-									<li> <a href="https://pubs.acs.org/doi/full/10.1021/jacs.4c02163"><i>Tetramerization of BEB-Doped Phenalenyls to Obtain (BE)<sb>8</sb>-[16]Annulenes (E = N, O)</i></a><br>
-										Alexander S. Scholz, Michael Bolte, Alexander Virovets, Eugenia Peresypkina, Hans-Wolfram Lerner, Cate S. Anstöter<sp>*</sp> & Matthias Wagner<br>
-										<b>2024</b>, <i>JACS</i>, 146, 12100
-										</li><br>
-									<li> <a href="https://chemistry-europe.onlinelibrary.wiley.com/doi/full/10.1002/cphc.202300791"><i>Tuning (Anti) Aromaticity: Variations on the [8]‐Circulene Framework</i></a><br>
-										Patrick W. Fowler & Cate S. Anstöter<sp>*</sp> <br>
-										<b>2024</b>, <i>ChemPhysChem</i>, 25, e202300791
-										</li><br>
-																	
-										<li> <a href="https://pubs.aip.org/aip/jcp/article/158/24/241101/2897719"><i>Autoionization from the Plasmon Resonance in Isolated 1-Cyanonaphthalene</i></a><br>
-										James N. Bull, Paola Bolognesi, Cate S. Anstöter, Eleanor K. Ashworth, José E. Navarro Navarrete, Boxing Zhu, Robert Richter, Nitish Pal, Jacopo Chiarinelli, Lorenzo Avaldi, Henning Zettergren & Mark H. Stockett <br>
-										<b>2023</b>, <i>J. Chem. Phys.</i>, 158, 241101
-										</li><br>
-										<li> <a href="https://pubs.rsc.org/en/content/articlehtml/2023/cp/d3cp04359b"><i>Photodissociative Decay Pathways of the Flavin Mononucleotide Anion and its Complexes with Tryptophan and Glutamic Acid</i></a><br>
-										Kelechi O. Uleanya, Cate S. Anstöter & Caroline E. H. Dessent<br>
-										<b>2023</b>, <i>PCCP</i>, 25, 30697
-										</li><br>
-										<li> <a href="https://chemistry-europe.onlinelibrary.wiley.com/doi/full/10.1002/cptc.202300133"><i>Laser Interfaced Mass Spectrometry of the Sunscreen Molecule Octocrylene Demonstrates that Protonation Does not Impact Photostability</i></a><br>
-										Cate S. Anstöter, Natalie G. K. Wong, Kgato P. Selwe & Caroline E. H. Dessent<br>
-										<b>2023</b>, <i>ChemPhotoChem</i>, 7, e202300133
-										</li><br>
-										<li> <a href="https://pubs.rsc.org/en/content/articlehtml/2023/cp/d3cp03250g"><i>Alkylated Green Fluorescent Protein Chromophores: Dynamics in the Gas Phase and in Aqueous Solution</i></a><br>
-										Eleanor K. Ashworth, Min-Hsien Kao, Cate S. Anstöter, Gerard Riesco-Llach, Lluís Blancafort, Kyril M. Solntsev, Stephen R. Meech, Jan R. R. Verlet & James N. Bull<br>
-										<b>2023</b>, <i>PCCP</i>, 25, 23626
-										</li><br>
-
-										<li> <a href="https://www.mdpi.com/1420-3049/27/24/8796"><i>Photochemical Degradation of the UV Filter Octyl Methoxy Cinnamate Probed via Laser-Interfaced Mass Spectrometry</i></a><br>
-										Natalie G. K. Wong, Maria Sereli, Cate S. Anstöter & Caroline E. H. Dessent<br>
-										<b>2022</b>, <i>Molecules</i>, 27, 8796
-										</li><br>
-										<li> <a href="https://pubs.acs.org/doi/full/10.1021/acs.jpca.2c06122"><i>Effective Fragment Potentials for Microsolvated Excited and Anionic States</i></a><br>
-										Cate S Anstöter, Salsabil Abou-Hatab, Mushir Thodika & Spiridoula Matsika<br>
-										<b>2022</b>, <i>J. Phys. Chem. A</i>, 126, 8508
-										</li><br>							
-										<li> <a href="https://pubs.acs.org/doi/full/10.1021/acs.jpclett.2c02931"><i>Spectroscopy and Theoretical Modeling of Tetracene Anion Resonances</i></a><br>
-										Cole R. Sagan, Cate S. Anstöter<sp>*</sp>, Mushir Thodika, Kenneth D. Wilson, Spiridoula Matsika & Etienne Garand<br>
-										<b>2022</b>, <i>J. Phys. Chem. Letts</i>, 13, 10245
-										</li><br>
-										<li> <a href="https://pubs.aip.org/aip/jcp/article/157/6/064302/2841701"><i>Resonances in Nitrobenzene Probed by the Electron Attachment to Neutral and by the Photodetachment from Anion</i></a><br>
-										Miloš Ranković, Pamir Nag, Cate S. Anstöter, Golda Mensa-Bonsu, Ragesh Kumar TP, Jan R. R. Verlet & Juraj Fedor<br>
-										<b>2022</b>, <i>J. Chem. Phys.</i>, 157, 064302
-										</li><br>
-										<li> <a href="https://pubs.aip.org/aip/jcp/article/157/6/064302/2841701"><i>A Hückel Model for the Excited-State Dynamics of a Protein Chromophore Developed Using Photoelectron Imaging</i></a><br>
-										Cate S Anstöter<sp>*</sp> & Jan R. R. Verlet<br>
-										<b>2022</b>, <i>Acc. Chem. Res.</i>, 55, 1205
-										</li><br>
-										<li> <a href="https://pubs.rsc.org/en/content/articlehtml/2022/cp/d2cp03831e"><i>Probing the Electronic Relaxation Pathways and Photostability of the Synthetic Nucleobase Z via Laser Interfaced Mass Spectrometry</i></a><br>
-										William Whitaker, Katya E. Moncrieff, Cate S. Anstöter, Natalie G. K. Wong, Jacob A. Berenbeim & Caroline E. H. Dessent<br>
-										<b>2022</b>, <i>PCCP</i>, 24, 27836
-										</li><br>
-										<li> <a href="https://pubs.rsc.org/en/content/articlehtml/2022/cp/d2cp01612e"><i>Photostability of the Deprotonated Forms of the UV Filters Homosalate and Octyl Salicylate: Molecular Dissociation Versus Electron Detachment Following UV Excitation</i></a><br>
-									       Natalie G. K. Wong, Conor D. Rankine, Cate S. Anstöter & Caroline E. H. Dessent<br>
-										<b>2022</b>, <i>PCCP</i>, 24, 17068
-										</li><br>
-										<li> <a href="https://pubs.rsc.org/en/content/articlehtml/2022/cp/d1cp05259d"><i>Photo-isomerization of the Isolated Photoactive Yellow Protein Chromophore: What Comes Before the Primary Step?</i></a><br>
-									        Cate S. Anstöter, Basile F. E. Curchod & Jan R. R. Verlet<br>
-										<b>2022</b>, <i>PCCP</i>, 24, 1305
-										</li><br>
-
-										<li> <a href="https://pubs.acs.org/doi/full/10.1021/acs.jpclett.1c03532"><i>Nonadiabatic Dynamics between Valence, Nonvalence, and Continuum Electronic States in a Heteropolycyclic Aromatic Hydrocarbon</i></a><br>
-									        James N. Bull, Cate S. Anstöter, Mark H. Stockett, Connor J. Clarke, Jemma A. Gibbard, Evan J. Bieske & Jan R. R. Verlet<br>
-										<b>2021</b>, <i>J. Phys. Chem. Letts</i>, 12, 11811
-										</li><br>
-										<li> <a href="https://pubs.acs.org/doi/full/10.1021/acs.jpca.1c05288"><i>Modeling the Ultrafast Electron Attachment Dynamics of Solvated Uracil</i></a><br>
-									        Cate S. Anstöter<sp>*</sp>, Mark DelloStritto, Michael L. Klein & Spiridoula Matsika<br>
-										<b>2021</b>, <i>J. Phys. Chem. A</i>, 125, 6995
-										</li><br>
-										<li> <a href="https://pubs.acs.org/doi/full/10.1021/acs.jpca.1c03379"><i>Modeling the Photoelectron Angular Distributions of Molecular Anions: Roles of the Basis Set, Orbital Choice, and Geometry</i></a><br>
-									        Cate S. Anstöter<sp>*</sp> & Jan R. R. Verlet<br>
-										<b>2021</b>, <i>J. Phys. Chem. A</i>, 125, 4888
-										</li><br>
-										<li> <a href="https://www.tandfonline.com/doi/full/10.1080/00268976.2020.1821921"><i>Photoelectron Imaging of the SO<sb>3</sb> Anion: Vibrational Resolution in Photoelectron Angular Distributions</i></a><br>
-									        Cate S. Anstöter & Jan R. R. Verlet<br>
-										<b>2021</b>, <i>Mol. Phys.</i>, 119, 1
-										</li><br>
-										<li> <a href="https://pubs.rsc.org/en/content/articlehtml/2021/cp/d1cp00261a"><i>Autodetachment Dynamics of 2-naphthoxide and Implications for Astrophysical Anion Abundance</i></a><br>
-									        Eleanor K. Ashworth, Cate S. Anstöter, Jan R. R. Verlet & James N. Bull<br>
-										<b>2021</b>, <i>PCCP</i>, 23, 5817
-										</li><br>
-
-										<li> <a href="https://pubs.acs.org/doi/full/10.1021/acs.jpca.0c07407"><i>Understanding the Interplay between the Nonvalence and Valence States of the Uracil Anion upon Monohydration</i></a><br>
-									        Cate S. Anstöter<sp>*</sp> & Spiridoula Matsika<br>
-										<b>2020</b>, <i>J. Phys. Chem. A</i>, 124, 9237
-										</li><br>
-										<li> <a href="https://pubs.acs.org/doi/full/10.1021/acs.jpclett.0c02036"><i>Gas-Phase Synthesis and Characterization of the Methyl-2, 2-dicyanoacetate Anion Using Photoelectron Imaging and Dipole-Bound State Autodetachment</i></a><br>
-									        Cate S. Anstöter<sp>*</sp> & Jan R. R. Verlet<br>
-										<b>2020</b>, <i>J. Phys. Chem. Letts</i>, 11, 6456
-										</li><br>
-										<li> <a href="https://www.nature.com/articles/s41467-020-16667-x"><i>Geometric and Electronic Structure Probed Along the Isomerisation Coordinate of a Photoactive Yellow Protein Chromophore</i></a><br>
-									        Cate S. Anstöter, Basile F. E. Curchod & Jan R. R. Verlet<br>
-										<b>2020</b>, <i>J. Nat. Commun.</i>, 11, 2827
-										</li><br>
-										<li> <a href="https://www.nature.com/articles/s41467-020-16667-x"><i>Mode-Specific Vibrational Autodetachment Following Excitation of Electronic Resonances by Electrons and Photons</i></a><br>
-									        Cate S. Anstöter, Golda Mensa-Bonsu, Pamir Nag, Miloš Ranković, Ragesh Kumar TP, Anton N. Boichenko, Anastasia V. Bochenkova, Juraj Fedor & Jan R. R. Verlet<br>
-										<b>2020</b>, <i>Phys. Rev. Lett.</i>, 124, 203401
-										</li><br>
-									      <li> <a href="https://pubs.acs.org/doi/full/10.1021/acs.jpca.0c01260"><i>Role of Nonvalence States in the Ultrafast Dynamics of Isolated Anions</i></a><br>
-									        Jan R. R. Verlet, Cate S. Anstöter, James N. Bull & Joshua P. Rogers<br>
-										<b>2020</b>, <i>J. Phys. Chem. A</i>, 124, 3507
-										</li><br>
-										<li> <a href="https://pubs.acs.org/doi/full/10.1021/acs.jpca.9b11993"><i>Fingerprinting the Excited-State Dynamics in Methyl Ester and Methyl Ether Anions of Deprotonated para-Coumaric Acid</i></a><br>
-									        James N. Bull, Cate S. Anstöter & Jan R. R. Verlet<br>
-										<b>2020</b>, <i>J. Phys. Chem. A</i>, 124, 2140
-										</li><br>
-										<li> <a href="https://hrcak.srce.hr/261080"><i>Catacondensed Chemical Hexagonal Complexes: A Natural Generalisation of Benzenoids</i></a><br>
-									        Cate S. Anstöter, Nino Bašić, Patrick W. Fowler & Tomaž Pisanski<br>
-										<b>2020</b>, <i>Croat. Chem. Acta</i>, 93, 289
-										</li><br>
-									<li> <a href="https://pubs.rsc.org/en/content/articlehtml/2020/cp/d0cp02284e"><i>Modelling Aromatisation of (BN)<sb>n</sb>H<sb>2n</sb> Azabora-annulenes</i></a><br>
-									        Cate S. Anstöter<sp>*</sp>, Christopher M. Gibson & Patrick W. Fowler<br>
-										<b>2020</b>, <i>PCCP</i>, 22, 15919
-										</li><br>
-																	
-										<li> <a href="https://www.nature.com/articles/s41467-019-13819-6"><i>Ultrafast Valence to Non-Valence Excited State Dynamics in a Common Anionic Chromophore</i></a><br>
-									       James N. Bull, Cate S. Anstöter & Jan R. R. Verlet<br>
-										<b>2019</b>, <i>Nat. Commun.</i>, 10, 5820
-										</li><br>
-										<li> <a href="https://pubs.acs.org/doi/full/10.1021/jacs.9b01345"><i>Spectroscopic Determination of an Anion−π Bond Strength</i></a><br>
-									       Cate S. Anstöter, Joshua P. Rogers & Jan R. R. Verlet<br>
-										<b>2019</b>, <i>JACS</i>, 141, 6132
-										</li><br>
-										<li> <a href="https://pubs.acs.org/doi/full/10.1021/acs.jpca.8b11627"><i>Photoelectron Spectroscopy of the Hexafluorobenzene Cluster Anions: (C<sb>6</sb>F<sb>6</sb>)<sb>n</sb><sp>-</sp>(n=1–5) and I<sp>-</sp>(C<sb>6</sb>F<sb>6</sb>)</i></a><br>
-									       Joshua P. Rogers, Cate S. Anstöter, James N. Bull, Basile F. E. Curchod & Jan R. R. Verlet<br>
-										<b>2019</b>, <i>J. Phys. Chem. A</i>, 123, 1602
-										</li><br>
-										<li> <a href="https://pubs.rsc.org/en/content/articlehtml/2019/cp/c9cp04942h"><i>On the Stability of a Dipole-Bound State in the Presence of a Molecule</i></a><br>
-									       Maria Elena Castellani, Cate S. Anstöter & Jan R. R. Verlet<br>
-										<b>2019</b>, <i>PCCP</i>, 21, 24286
-										</li><br>
-										<li> <a href="https://pubs.rsc.org/en/content/articlehtml/2019/cp/c9cp01624d"><i>Ultrafast Photoisomerisation of an Isolated Retinoid</i></a><br>
-									       James N. Bull, Christopher W. West, Cate S. Anstöter, Gabriel da Silva, Evan J. Bieske & Jan R. R. Verlet<br>
-										<b>2019</b>, <i>PCCP</i>, 21, 10567
-										</li><br>
-																	
-										<li> <a href="https://pubs.acs.org/doi/full/10.1021/acs.jpclett.8b00739"><i>Evidence of Electron Capture of an Outgoing Photoelectron Wave by a Nonvalence State in (C<sb>6</sb>F<sb>6</sb>)<sb>n</sb><sp>-</sp></i></a><br>
-									       Joshua P. Rogers, Cate S. Anstöter & Jan R. R. Verlet<br>
-										<b>2018</b>, <i>J. Phys. Chem. Letts</i>, 10, 2504
-										</li><br>
-										<li> <a href="https://www.nature.com/articles/nchem.2912"><i>Ultrafast Dynamics of Low-Energy Electron Attachment via a Non-Valence Correlation-Bound State</i></a><br>
-									       Joshua P. Rogers, Cate S. Anstöter & Jan R. R. Verlet<br>
-										<b>2018</b>, <i>Nature Chem.</i>, 10, 341
-										</li><br>
-								         <li> <a href="https://pubs.rsc.org/en/content/articlehtml/2014/cp/c8cp04877k"><i>Electronic Structure of the para-Dinitrobenzene Radical Anion: a Combined 2D Photoelectron Imaging and Computational Study</i></a><br>
-									       Cate S. Anstöter, Thomas E. Gartmann, Laurence H. Stanley, Anastasia V. Bochenkova & Jan R. R. Verlet<br>
-										<b>2018</b>, <i>PCCP</i>, 20, 24019
-										</li><br>
-																									
-										<li> <a href="https://pubs.acs.org/doi/full/10.1021/acs.jpclett.7b00726"><i>Sensitivity of Photoelectron Angular Distributions to Molecular Conformations of Anions</i></a><br>
-									       Cate S. Anstöter, Charlie R. Dean & Jan R. R. Verlet<br>
-										<b>2017</b>, <i>J. Phys. Chem. Letts</i>, 8, 2268
-										</li><br>
-										<li> <a href="https://pubs.rsc.org/en/content/articlehtml/2017/cp/c7cp05766k"><i>Chromophores of chromophores: a bottom-up Hückel picture of the excited states of photoactive proteins</i></a><br>
-									       Cate S. Anstöter, Charlie R. Dean & Jan R. R. Verlet<br>
-										<b>2017</b>, <i>PCCP</i>, 19, 29772
-										</li><br>
-									      <li> <a href="https://pubs.rsc.org/en/content/articlehtml/2017/sc/c6sc05405f"><i>Resonances of the Anthracenyl Anion Probed by Frequency-Resolved Photoelectron Imaging of Collision-Induced Dissociated Anthracene Carboxylic Acid</i></a><br>
-									       Laurence H Stanley, Cate S. Anstöter & Jan R. R. Verlet<br>
-										<b>2017</b>, <i>Chem. Sci.</i>, 8, 3054
-										</li><br>
-																																	
-										<li> <a href="https://www.tandfonline.com/doi/full/10.1080/0144235X.2016.1203522"><i>Ultrafast Dynamics of Temporary Anions Probed Through the Prism of Photodetachment</i></a><br>
-									       Cate S. Anstöter, James N. Bull & Jan R. R. Verlet<br>
-										<b>2016</b>, <i>International Reviews in Physical Chemistry</i>, 8, 2268
-										</li><br>
-									<li> <a href="https://pubs.acs.org/doi/full/10.1021/acs.jpcb.6b05271"><i>The Vitamin E Radical Probed by Anion Photoelectron Imaging</i></a><br>
-									       Cate S. Anstöter, Christopher W. West, James N. Bull & Jan RR Verlet<br>
-										<b>2016</b>, <i>J. Phys. Chem. B</i>, 120, 7108
-										</li><br>
-										<li> <a href="https://pubs.acs.org/doi/full/10.1021/acs.jcim.5b00580"><i>The AIBLHiCoS Method: Predicting Aqueous pK<sb>a</sb> Values from Gas-Phase Equilibrium Bond Lengths</i></a><br>
-									       Cate Anstöter, Beth A. Caine & Paul L. A. Popelier<br>
-										<b>2016</b>, <i>J. Chem. Inf. Model</i>, 56, 471
-										</li><br>
-								</ol>
-
-
-							
-							</p>
-							
-							<!-- 	Here are the fancy icons that link to your social media.
-								These icons are rendered using Font Awesome fonts, and you can find more icons
-								here: https://fontawesome.com/icons
-							-->
-							<!--ul class="icons">
-								<!-- The Twitter icon -->
-								<!-- li>
-									<!-- 	Note that you need to change the link to point to your page.
-										Replace "#" with your Twitter profile page.
-									-->
-									<!-- a href="#" class="icon fa-twitter">
-										<span class="label">Twitter</span>
-									</a>
-								</li>
-								<!-- The Facebook icon -->
-
-								<!-- 	We can add a new icon by searching on the Font Awesome website
-									for the correct class name and inserting it as a new list item.
-
-									We found "envelope" here: https://fontawesome.com/icons/envelope
-								-->
-								<!-- <li>
-									<a href="#" class="icon fa-envelope">
-										<span class="label">Email</span>
-									</a>
-								</li> -->
-							</ul>
-						</article>
-
-							<article id="news">
-								<h2 class="major">News</h2>
-
-							<h2>Upcoming</h2>
-							<dl>
-								<h3>2026</h3>
-								<dt>August</dt>
-							<dd>Cate will give an invited talk at the <a href="https://advances-in-theory-of-electronic-resonances.raiselysite.com/">
-								Advances in Theory of Electronic Resonances</a> workshop in Telluride!</dd>
-								<dd>Chiara will join the <a href="https://iauarchive.eso.org/administration/membership/individual/15041/"> García-Hernández 
-								group</a> in Tenerife, as part of a short term scientific mission. This STSM is supported by <a href="https://research.iac.es/proyecto/nanospace/">Carbon Molecular Nanostructures in Space COST network</a>!</dd>
-
-									<dt>June</dt>
-							<dd>Cate will host the <a href="https://csanstoter.github.io/MAGIC2026/">6th Workshop MAGnetically Induced Currents in molecules</a> at the University of Glasgow. <br>
-								
-								 </dd>
-
-										<dt>May</dt>
-						  <dd>Cate took part in
-    <a href="https://pintofscience.co.uk/">Pint of Science</a>'s
-    <a href="https://www.glasgowsciencecentre.org/creative-reactions">Creative Reactions</a>
-    festival, which pairs scientists with local artists — the artist then creates an original artwork inspired by the scientist's research.
-    Cate was paired with Glasgow-based artist
-    <a href="https://amusing-handball-242.notion.site/Gabriele-Rossi-Portfolio-2e6fccea9e5c80c8abd9c3f7cd3bd605">Gabriele Rossi</a>,
-    who was inspired to build a sculpture. In his own words:
-    <br><br>
-    <blockquote><i>"An ominous sun god stands over a sea of molecules, bombarding them with high energy rays. The molecules twist and dance while being hit by high energy particles. Will they survive the onslaught or will they break and never be the same again..."</i></blockquote><br>
-							 <!-- CAROUSEL — add your own image paths to the src attributes below -->
-    <div class="carousel" id="carousel-creative-reactions">
-      <div class="carousel-track" id="carousel-creative-reactions-track">
-        <img src="images/GR1.jpeg" style="width:500px; height:380px; object-fit: cover;" alt="Creative Reactions 1"/>
-        <img src="images/GR2.jpeg" style="width:500px; height:380px; object-fit: cover;" alt="Creative Reactions 2"/>
-        <img src="images/GR3.jpeg" style="width:500px; height:380px; object-fit: cover;" alt="Creative Reactions 3"/>
-        <!-- Add or remove <img> lines here as needed -->
-      </div>
-      <button class="carousel-btn prev" onclick="moveCarousel('carousel-creative-reactions', -1)">&#8249;</button>
-      <button class="carousel-btn next" onclick="moveCarousel('carousel-creative-reactions',  1)">&#8250;</button>
-    </div>
-    <div class="carousel-dots" id="carousel-creative-reactions-dots"></div>
-  </dd>
-								<dd>Cate gave a talk at <a href="https://csd11.si/index.html">Computers in Scientific Discovery 11</a>, in Kranjska Gora, Slovenia. <br>
-								<center><span class="image main">
-								<img src="images/csd11.jpg" style="width:500px; height:380px; object-fit: cover;"/>
-							</span></center>
-								 </dd>
-				<dt>April</dt>
-							<dd>New paper with the Matsika group <a href="https://pubs.acs.org/doi/10.1021/acs.jpclett.6c00590">is out now!</a> 
-								<center><span class="image main">
-								<img src="images/cover.jpg" style="width:380px; height:500px; object-fit: cover;"/>
-							</span></center>
-								Check out Kanishka and Maneesh's cover! <br>
-								
-								 </dd>
-								
-
-								<dt>January</dt>
-								<dd>Cate has been elected as the secretary of the <a href="https://spectroscopyanddynamics.uk/sdg-meeting/">RSC Spectroscopy & Dynamics special interest group</a> </dd> </dd>
-								<dd>The <a href="https://winterschool.cc/program">12th edition of the Virtual Winter School of Computational Chemistry</a> ran successfully.  Find the recorded talks <a href="https://zenodo.org/communities/vwscc/records?q=&l=list&p=1&s=10&sort=newest">here</a>  </dd> </dd>
-							<dd>Cate gave an invited talk at the <a href="https://www.icesaa-4.in/">4<sup>th</sup> International Conference on Excited State Aromaticity and Antiaromaticity (ICESAA-4)</a> hosted by ISSER Thiruvananthapuram!</dd>
-									<center><span class="image main">
-								<img src="images/DSC_7309.JPG" style="width:500px; height:350px; object-fit: cover;"/>
-							</span></center>
-								
-							</dl>
-								
-							
-								<h3>2025</h3>
-							<dl>
-								<dt>November</dt>
-								<dd>Our paper on perturbing the photochemical landscape of organic sunscreen AVB <a href="https://pubs.acs.org/doi/10.1021/jacs.5c12521">is available now online</a> at <i>JACS</i>! </dd>
-								<dt>October</dt>
-								<dd>Cate joined the University of Glasgow as a Lecturer in Physical Chemistry!</dd>
-								<dt>August</dt>
-								<dd>Annie gave an excellent presentation on the work from her summer project at a summer research symposium.  </dd>
-								<center>									<img src="images/IMG_5655.jpeg" style="width:500px; height:380px; object-fit: cover;"/></center>
-
-								<dt>June</dt>
-								<dd>Annie joins the group for a summer project, funded by a Carnegie Scholarship!</dd> </dd>
-								<dd>The VWSCC ran a special one-day event, to showcase the Q-Chem 6.3. Find the recorded talks <a href="https://zenodo.org/records/15648308">here</a> </dd>
-							<dt>May</dt>
-							<dd>Cate visited KU Leuven to give a seminar and meet with the <a href="https://chem.kuleuven.be/en/research/qcpc/tue">Jagau group</a></dd>
-								<dt>April</dt>
-							<dd>Cate gave an inited talk at the COSMOS programme grant <a href="https://cosmosproject.co.uk/news/ecr_careers_and_science_1/">ECR Workshop: Career Development and Science</a></dd>
-									<center>									<img src="images/cosmos.jpg" style="width:500px; height:280px; object-fit: cover;"/></center>
-								<dt>January</dt>
-								<dd><a href="https://doi.org/10.1002/cphc.202401069"><i>Perturbing Pentalene</i> invited paper</a> is online at <i>PhysChemPhys</i>! </dd> 
-								<dd>The <a href="https://winterschool.cc/program">11th edition of the Virtual Winter School of Computational Chemistry</a> ran successfully.  Find the recorded talks <a href="https://zenodo.org/communities/vwscc/records?q=&l=list&p=1&s=10&sort=newest">here</a>  </dd> 
-								<dd>CSA group attended the RSC Spectroscopy and Dynamics Group Meeting in Leicester, Chiara presented a poster and Cate gave an invited talk. </dd> 
-							
-							</dl>
-							<h3>2024</h3>
-								<dl>
-								<dt>November</dt>
-									<dd>Paper in collaboration with the <a href="https://www.ingleson.chem.ed.ac.uk/">Ingleson group</a> is <a href="https://doi.org/10.1002/anie.202419094">out now</a> as a VIP paper in Angewandte</dd> 
-								<dd>Cate gave a departmental seminar at Newcastle University</li> 
-									<dt>September</dt>
-								<dd>Cate gave an invited talk at the <a href="https://www.plus.ac.at/magic2024/">5th Workshop on MAGnetically Induced Molecular Currents</a> in Frauenwörth </dd>
-										<center><span class="image main">
-								<img src="images/MAGIC24.jpg" style="width:500px; height:340px; object-fit: cover;"/>
-							</span></center>
-									
-								<dt>August</dt>
-									<dd>August: Publication with the <a href="https://isla-edi.com/">E. K. Campbell group</a> is <a href="https://pubs.aip.org/aip/jcp/article/161/7/074305/3308098/Electronic-and-vibrational-spectroscopy-of">out now</a></dd> 
-								<dt>June</dt>
-									<dd>Cate gave an invited talk and panel discussion as part of the <a href="https://updiceproject.com/2024/06/12/women-in-photochemistry-symposium-11-june-2024-ucl/"><i>Women in Photochemistry</i></a> Meeting at UCL, as part of UPDICE</dd>
-								<dt>April</dt>
-									<dd>Paper in collaboration with the <a href="https://www.uni-frankfurt.de/58708118/Group_of_Prof__Dr__Matthias_Wagner">Wagner group</a> out now in <a href="https://pubs.acs.org/doi/full/10.1021/jacs.4c02163"><i>JACS</i>!</a></dd>
-							<dt>January</dt>
-									<dd> First CSA group <a href="https://chemistry-europe.onlinelibrary.wiley.com/doi/full/10.1002/cphc.202300791">paper</a> out now</dd>
-								</dl>
-									
-							<h3>2023</h3>
-								<dl>
-									<dt>October</dt>
-								<dd>Beginning of Cate's Christina Miller Fellowship</dd>
-							</dl>
-						</article>
-						
+					<!-- Collaboration pills -->
+					<div style="display:flex; flex-wrap:wrap; gap:0.6rem; margin:1.2rem 0 1.8rem;">
+						<a href="https://garand.chem.wisc.edu/" target="_blank" rel="noopener"
+						   style="display:inline-flex; align-items:center; gap:0.5rem; padding:0.4rem 0.85rem;
+						          border:1px solid rgba(255,255,255,0.25); border-radius:999px; font-size:0.78rem;
+						          letter-spacing:0.04em; color:inherit; text-decoration:none;
+						          background:rgba(255,255,255,0.06);"
+						   onmouseover="this.style.background='rgba(255,255,255,0.13)';this.style.borderColor='rgba(255,255,255,0.5)'"
+						   onmouseout="this.style.background='rgba(255,255,255,0.06)';this.style.borderColor='rgba(255,255,255,0.25)'">
+							<span style="opacity:0.55; font-size:0.9em;">&#9671;</span> Garand group &middot; UW–Madison
+						</a>
+						<a href="https://www.matsikalab.org/" target="_blank" rel="noopener"
+						   style="display:inline-flex; align-items:center; gap:0.5rem; padding:0.4rem 0.85rem;
+						          border:1px solid rgba(255,255,255,0.25); border-radius:999px; font-size:0.78rem;
+						          letter-spacing:0.04em; color:inherit; text-decoration:none;
+						          background:rgba(255,255,255,0.06);"
+						   onmouseover="this.style.background='rgba(255,255,255,0.13)';this.style.borderColor='rgba(255,255,255,0.5)'"
+						   onmouseout="this.style.background='rgba(255,255,255,0.06)';this.style.borderColor='rgba(255,255,255,0.25)'">
+							<span style="opacity:0.55; font-size:0.9em;">&#9671;</span> Matsika group &middot; Temple University
+						</a>
 					</div>
 
-					<!-- This is the footer that appears at the bottom of the page -->
-					<footer id="footer">
-						<!-- 	You can change "Untitled" to your name to show everyone that
-							this is your work.
-						-->
-						<p class="copyright">&copy; CSA. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
-					</footer>
+					<h3>Related publications</h3>
+					<ul>
+						<li><a href="https://pubs.acs.org/doi/10.1021/acs.jpclett.6c00590"><em>Revisiting the Nature of Low-Lying &pi; Resonances in Micro-solvated Uracil</em></a><br>
+							Kanishka Vidanelay, Maneesh Pyla, <b>Cate S. Anstöter</b> and Spiridoula Matsika<br>
+							<b>2026</b>, <em>J. Phys. Chem. Letts</em>, 17, 4561
+						</li><br>
+						<li><a href="https://pubs.aip.org/aip/jcp/article/161/7/074305/3308098"><em>Electronic and vibrational spectroscopy of benzonitrile cation for astrochemical consideration</em></a><br>
+							Francis C. Daly, Thomas E. Douglas-Walker, Julianna Palotás, <b>Cate S. Anstöter</b>, Angel Zheng, Ewen K. Campbell<br>
+							<b>2024</b>, <em>J. Chem. Phys.</em>, 161, 074305
+						</li><br>
+						<li><a href="https://pubs.aip.org/aip/jcp/article/158/24/241101/2897719"><em>Autoionization from the Plasmon Resonance in Isolated 1-Cyanonaphthalene</em></a><br>
+							James N. Bull, Paola Bolognesi, <b>Cate S. Anstöter</b>, Eleanor K. Ashworth, José E. Navarro Navarrete, Boxing Zhu, Robert Richter, Nitish Pal, Jacopo Chiarinelli, Lorenzo Avaldi, Henning Zettergren &amp; Mark H. Stockett<br>
+							<b>2023</b>, <em>J. Chem. Phys.</em>, 158, 241101
+						</li><br>
+						<li><a href="https://pubs.acs.org/doi/full/10.1021/acs.jpclett.2c02931"><em>Spectroscopy and Theoretical Modeling of Tetracene Anion Resonances</em></a><br>
+							Cole R. Sagan, <b>Cate S. Anstöter</b><sup>*</sup>, Mushir Thodika, Kenneth D. Wilson, Spiridoula Matsika &amp; Etienne Garand<br>
+							<b>2022</b>, <em>J. Phys. Chem. Letts</em>, 13, 10245
+						</li>
+					</ul>
+
+					<!-- ── DIVIDER ──────────────────────────────────────────── -->
+					<hr style="border:none; border-top:1px solid rgba(255,255,255,0.15); margin:2.5rem 0;"/>
+
+					<!-- ── SECTION 2: AROMATICITY ───────────────────────────── -->
+					<h3>The Magnetic Fingerprints of Aromaticity</h3>
+
+					<span class="image">
+						<center><img src="images/arom.png" style="width:480px; height:380px; object-fit: cover;"/></center>
+					</span><br>
+
+					<p>
+						Aromaticity is one of the most powerful organising concepts in chemistry, yet its definition
+						remains stubbornly elusive. The <strong>magnetic criterion</strong> — based on the ring
+						current induced when a conjugated molecule is placed in an external magnetic field — is
+						widely regarded as the most rigorous theoretical diagnostic. Aromatic systems (those with
+						4<em>n</em>+2 &pi; electrons) sustain a diatropic ring current; antiaromatic systems
+						(4<em>n</em> &pi; electrons) sustain a paratropic one.
+					</p>
+					<p>
+						Our group uses the <strong>ipsocentric approach</strong> to calculate and visualise these
+						induced current densities — a method unique in revealing not just the existence of a ring
+						current, but its physical origin. Through a set of symmetry-based selection rules, the
+						ipsocentric framework identifies precisely which molecular orbitals are responsible for
+						aromatic or antiaromatic behaviour, providing a direct and interpretable window into
+						electronic delocalisation.
+					</p>
+					<p>
+						In practice, we work closely with synthetic chemistry groups to characterise experimentally
+						realised systems. We collaborated with the
+						<a href="https://www.uni-frankfurt.de/58708118/Group_of_Prof__Dr__Matthias_Wagner">Wagner group</a>
+						(Goethe Universität, Frankfurt) on BN- and BO-doped [16]annulenes — macrocyclic
+						<strong>redox-active aromatic switches</strong> that transition from non-aromatic to globally
+						aromatic on two-electron reduction — providing the complete ipsocentric analysis of their
+						neutral and dianionic states. More recently, collaboration with the
+						<a href="https://www.ingleson.chem.ed.ac.uk/">Ingleson group</a>
+						(University of Edinburgh) on a novel base-free two-coordinate oxoborane — recognised as a
+						<em>Very Important Paper</em> in <em>Angewandte Chemie</em> — demonstrated the power of the
+						ipsocentric approach for characterising aromaticity in highly unusual and reactive main-group
+						heterocycles. These collaborations reflect a broader interest in understanding how heteroatom
+						substitution, molecular topology, and redox state collectively govern aromatic character in
+						synthetically realised systems.
+					</p>
+
+					<!-- Collaboration pills -->
+					<div style="display:flex; flex-wrap:wrap; gap:0.6rem; margin:1.2rem 0 1.8rem;">
+						<a href="https://www.uni-frankfurt.de/58708118/Group_of_Prof__Dr__Matthias_Wagner" target="_blank" rel="noopener"
+						   style="display:inline-flex; align-items:center; gap:0.5rem; padding:0.4rem 0.85rem;
+						          border:1px solid rgba(255,255,255,0.25); border-radius:999px; font-size:0.78rem;
+						          letter-spacing:0.04em; color:inherit; text-decoration:none;
+						          background:rgba(255,255,255,0.06);"
+						   onmouseover="this.style.background='rgba(255,255,255,0.13)';this.style.borderColor='rgba(255,255,255,0.5)'"
+						   onmouseout="this.style.background='rgba(255,255,255,0.06)';this.style.borderColor='rgba(255,255,255,0.25)'">
+							<span style="opacity:0.55; font-size:0.9em;">&#9671;</span> Wagner group &middot; Goethe Universität
+						</a>
+						<a href="https://www.ingleson.chem.ed.ac.uk/" target="_blank" rel="noopener"
+						   style="display:inline-flex; align-items:center; gap:0.5rem; padding:0.4rem 0.85rem;
+						          border:1px solid rgba(255,255,255,0.25); border-radius:999px; font-size:0.78rem;
+						          letter-spacing:0.04em; color:inherit; text-decoration:none;
+						          background:rgba(255,255,255,0.06);"
+						   onmouseover="this.style.background='rgba(255,255,255,0.13)';this.style.borderColor='rgba(255,255,255,0.5)'"
+						   onmouseout="this.style.background='rgba(255,255,255,0.06)';this.style.borderColor='rgba(255,255,255,0.25)'">
+							<span style="opacity:0.55; font-size:0.9em;">&#9671;</span> Ingleson group &middot; University of Edinburgh
+						</a>
+						<a href="https://www.sheffield.ac.uk/chemistry/staff/patrick-fowler" target="_blank" rel="noopener"
+						   style="display:inline-flex; align-items:center; gap:0.5rem; padding:0.4rem 0.85rem;
+						          border:1px solid rgba(255,255,255,0.25); border-radius:999px; font-size:0.78rem;
+						          letter-spacing:0.04em; color:inherit; text-decoration:none;
+						          background:rgba(255,255,255,0.06);"
+						   onmouseover="this.style.background='rgba(255,255,255,0.13)';this.style.borderColor='rgba(255,255,255,0.5)'"
+						   onmouseout="this.style.background='rgba(255,255,255,0.06)';this.style.borderColor='rgba(255,255,255,0.25)'">
+							<span style="opacity:0.55; font-size:0.9em;">&#9671;</span> Fowler group &middot; University of Sheffield
+						</a>
+					</div>
+
+					<h3>Related publications</h3>
+					<ul>
+						<li><a href="https://chemistry-europe.onlinelibrary.wiley.com/doi/abs/10.1002/cphc.202401069"><em>Perturbing Pentalene: Aromaticity and Antiaromaticity in a Non‐alternant Polycyclic Aromatic Hydrocarbon and BN‐heteroanalogues</em></a><br>
+							<b>Cate S. Anstöter</b><sup>*</sup> &amp; Patrick W. Fowler<br>
+							<b>2025</b>, <em>ChemPhysChem</em>, Available online
+						</li><br>
+						<li><a href="https://onlinelibrary.wiley.com/doi/full/10.1002/anie.202419094"><em>A Base-Free Two-Coordinate Oxoborane</em></a><br>
+							Clement R. P. Millet, Dominic R. Willcox, Gary S. Nichol, <b>Cate S. Anstöter</b> &amp; Michael J. Ingleson<br>
+							<b>2024</b>, <em>Angewandte Chemie</em>, 65, e202419094
+							&nbsp;<span style="font-size:0.72rem; padding:0.12rem 0.4rem; border:1px solid rgba(255,255,255,0.3); border-radius:3px; opacity:0.75; letter-spacing:0.05em;">VIP</span>
+						</li><br>
+						<li><a href="https://pubs.acs.org/doi/full/10.1021/jacs.4c02163"><em>Tetramerization of BEB-Doped Phenalenyls to Obtain (BE)<sub>8</sub>-[16]Annulenes (E = N, O)</em></a><br>
+							Alexander S. Scholz, Michael Bolte, Alexander Virovets, Eugenia Peresypkina, Hans-Wolfram Lerner, <b>Cate S. Anstöter</b><sup>*</sup> &amp; Matthias Wagner<br>
+							<b>2024</b>, <em>JACS</em>, 146, 12100
+						</li><br>
+						<li><a href="https://chemistry-europe.onlinelibrary.wiley.com/doi/full/10.1002/cphc.202300791"><em>Tuning (Anti) Aromaticity: Variations on the [8]‐Circulene Framework</em></a><br>
+							Patrick W. Fowler &amp; <b>Cate S. Anstöter</b><sup>*</sup><br>
+							<b>2024</b>, <em>ChemPhysChem</em>, 25, e202300791
+						</li>
+					</ul>
+
+				</article>
+
+				<!-- GROUP -->
+				<article id="group">
+					<h2 class="major">Group</h2>
+					<p>
+						<img src="images/chiara.JPG" style="width:200px; height:180px; object-fit: cover;">
+						<br>
+						<b>Chiara Beldì</b>
+						<br><i>PhD student</i> (2024-2027)
+						<br>
+						Bio: Chiara completed her master's degree in Physics and Astronomy at the University of Glasgow. In her master's project,
+						she studied the chemistry of hydrocarbons in interstellar space using a chemical kinetics simulation. Following this experience,
+						she developed an interest in computational astrochemistry and joined the group as a PhD student in 2024. Chiara is co-supervised by <a href="https://isla-edi.com/author/ewen-k.-campbell/">Dr. Ewen K. Campbell</a>.
+						Her research centres on the computational modelling of astrochemically-relevant molecules and their interactions with electrons, with a particular focus on molecular anions.
+					</p>
+					<br>
+					<h2>Alumni</h2>
+					<p>
+						<img src="images/ash_photo.jpg" style="width:200px; height:180px; object-fit: cover;">
+						<br>
+						<b>Ashutosh Jadhav</b>
+						<br><i>MRes student</i> (2024-2025)
+						<br>
+						Bio: Ashutosh received a Master's degree in Analytical Chemistry, complemented by a Postgraduate Diploma in Regulatory Affairs, from the University of Mumbai, India.
+						He is co-supervised by Prof. Anita Jones, and his research project is focussed on exploring an innovative fluorescent nucleobase analog, ABN.
+						This project aims to use computational chemistry to understand the excited states of ABN, specifically the fluorescence properties and solvent assisted excited state proton transfer.
+					</p>
+					<p>
+						<br>
+						<img src="images/Annie.jpg" style="width:200px; height:180px; object-fit: cover;">
+						<br>
+						<b>Annie Hunter</b>
+						<br><i>Carnegie Trust Intern</i> (Summer 2025)
+						<br>
+						Bio: Originally from Spain, Annie began her MChem degree at the University of Edinburgh in 2022.
+						She is currently a third year student with a particular interest in molecular orbital theory
+						and in the early stages of a summer internship investigating the (anti)aromaticity of PAHs containing heavier atoms with Cate, for which she is funded by the Carnegie Trust.
+					</p>
+					<h3>Project Students</h3>
+					<ul>
+						<li>Yi Xu (2025, UoE)</li>
+						<li>Pallavi Kajrekar (2024, UoE)</li>
+						<li>Ruiqi Jiao (2024, UoE)</li>
+					</ul>
+				</article>
+
+				<!-- PUBLICATIONS -->
+				<article id="publications">
+					<h2 class="major">Publications</h2>
+					Link to CSA's Google Scholar is <a href="https://scholar.google.com/citations?user=pne9pIwAAAAJ&hl=en">here</a><br>
+					<p>
+						<ol reversed>
+							<li><a href="https://pubs.rsc.org/en/content/articlelanding/2026/cp/d6cp00593d"><em>Gas-Phase Spectroscopy of H<sub>2</sub>O@C<sub>60</sub><sup>+</sup> and H<sub>2</sub>O@C<sub>60</sub><sup>+</sup>H in the Mid-Infrared: The Challenges of Searching for Endohedral Fullerenes in Space</em></a><br>
+								Olivia O'Neill, Julianna Palotás, Thomas E. Douglas-Walker, Cate S. Anstöter, Richard J. Whitby, Malcolm H. Levitt, Giel Berden, Jos Oomens &amp; Ewen K. Campbell<br>
+								<b>2026</b>, <em>PCCP</em>, 28, 9594
+							</li><br>
+							<li><a href="https://pubs.acs.org/doi/10.1021/acs.jpclett.6c00590"><em>Revisiting the Nature of Low-Lying &pi; Resonances in Micro-solvated Uracil</em></a><br>
+								Kanishka Vidanelay, Maneesh Pyla, Cate S. Anstöter and Spiridoula Matsika<br>
+								<b>2026</b>, <em>J. Phys. Chem. Letts</em>, 17, 4561<br>
+								<a href="https://pubs.acs.org/cms/10.1021/jpclcd.2026.17.issue-15/asset/jpclcd.2026.17.issue-15.xlargecover-2.jpg"><em>Check out Kanishka and Maneesh's cover here!</em></a>
+							</li><br>
+							<li><a href="https://chemrxiv.org/engage/chemrxiv/article-details/6894c11ffc5f0acb522999e0"><em>Localising Multiple Spin-Charge States in Bridgehead-to-peri Annulated Triptycenes</em></a><br>
+								Stefan Warrington, Antti-Pekka Miikael Reponen, Tejas Deshpande, Tamsin Carolan, Eleanor Dodd, Simon Coles, Cate S. Anstöter, Sascha Feldmann &amp; Iain Wright<br>
+								<b>2025</b>, <em>ChemRxiv</em>
+							</li><br>
+							<li><a href="https://pubs.acs.org/doi/10.1021/jacs.5c12521"><em>Disrupting the Photochemical Landscape of a &beta;-Diketone via Electrostatic Perturbation of Ground-State Tautomers</em></a><br>
+								Cate S. Anstöter, Sarah Wilson, Natalie G. K. Wong, Giel Berden, Jos Oomens, Anouk Rijs &amp; Caroline Dessent<br>
+								<b>2025</b>, <em>JACS</em>, 147, 45999–46007
+							</li><br>
+							<li><a href="https://chemistry-europe.onlinelibrary.wiley.com/doi/abs/10.1002/cphc.202401069"><em>Perturbing Pentalene: Aromaticity and Antiaromaticity in a Non‐alternant Polycyclic Aromatic Hydrocarbon and BN‐heteroanalogues</em></a><br>
+								Cate S. Anstöter<sup>*</sup> &amp; Patrick W. Fowler<br>
+								<b>2025</b>, <em>ChemPhysChem</em>, 26, e202401069
+							</li><br>
+							<li><a href="https://onlinelibrary.wiley.com/doi/full/10.1002/anie.202419094"><em>A Base-Free Two-Coordinate Oxoborane</em></a><br>
+								Clement R. P. Millet, Dominic R. Willcox, Gary S. Nichol, Cate S. Anstöter &amp; Michael J. Ingleson<br>
+								<b>2024</b>, <em>Angewandte Chemie</em>, 65, e202419094
+							</li><br>
+							<li><a href="https://pubs.aip.org/aip/jcp/article/161/7/074305/3308098"><em>Electronic and vibrational spectroscopy of benzonitrile cation for astrochemical consideration</em></a><br>
+								Francis C. Daly, Thomas E. Douglas-Walker, Julianna Palotás, Cate S. Anstöter, Angel Zheng, Ewen K. Campbell<br>
+								<b>2024</b>, <em>J. Chem. Phys.</em>, 161, 074305
+							</li><br>
+							<li><a href="https://pubs.acs.org/doi/full/10.1021/jacs.4c02163"><em>Tetramerization of BEB-Doped Phenalenyls to Obtain (BE)<sub>8</sub>-[16]Annulenes (E = N, O)</em></a><br>
+								Alexander S. Scholz, Michael Bolte, Alexander Virovets, Eugenia Peresypkina, Hans-Wolfram Lerner, Cate S. Anstöter<sup>*</sup> &amp; Matthias Wagner<br>
+								<b>2024</b>, <em>JACS</em>, 146, 12100
+							</li><br>
+							<li><a href="https://chemistry-europe.onlinelibrary.wiley.com/doi/full/10.1002/cphc.202300791"><em>Tuning (Anti) Aromaticity: Variations on the [8]‐Circulene Framework</em></a><br>
+								Patrick W. Fowler &amp; Cate S. Anstöter<sup>*</sup><br>
+								<b>2024</b>, <em>ChemPhysChem</em>, 25, e202300791
+							</li><br>
+							<li><a href="https://pubs.aip.org/aip/jcp/article/158/24/241101/2897719"><em>Autoionization from the Plasmon Resonance in Isolated 1-Cyanonaphthalene</em></a><br>
+								James N. Bull, Paola Bolognesi, Cate S. Anstöter, Eleanor K. Ashworth, José E. Navarro Navarrete, Boxing Zhu, Robert Richter, Nitish Pal, Jacopo Chiarinelli, Lorenzo Avaldi, Henning Zettergren &amp; Mark H. Stockett<br>
+								<b>2023</b>, <em>J. Chem. Phys.</em>, 158, 241101
+							</li><br>
+							<li><a href="https://pubs.rsc.org/en/content/articlehtml/2023/cp/d3cp04359b"><em>Photodissociative Decay Pathways of the Flavin Mononucleotide Anion and its Complexes with Tryptophan and Glutamic Acid</em></a><br>
+								Kelechi O. Uleanya, Cate S. Anstöter &amp; Caroline E. H. Dessent<br>
+								<b>2023</b>, <em>PCCP</em>, 25, 30697
+							</li><br>
+							<li><a href="https://chemistry-europe.onlinelibrary.wiley.com/doi/full/10.1002/cptc.202300133"><em>Laser Interfaced Mass Spectrometry of the Sunscreen Molecule Octocrylene Demonstrates that Protonation Does not Impact Photostability</em></a><br>
+								Cate S. Anstöter, Natalie G. K. Wong, Kgato P. Selwe &amp; Caroline E. H. Dessent<br>
+								<b>2023</b>, <em>ChemPhotoChem</em>, 7, e202300133
+							</li><br>
+							<li><a href="https://pubs.rsc.org/en/content/articlehtml/2023/cp/d3cp03250g"><em>Alkylated Green Fluorescent Protein Chromophores: Dynamics in the Gas Phase and in Aqueous Solution</em></a><br>
+								Eleanor K. Ashworth, Min-Hsien Kao, Cate S. Anstöter, Gerard Riesco-Llach, Lluís Blancafort, Kyril M. Solntsev, Stephen R. Meech, Jan R. R. Verlet &amp; James N. Bull<br>
+								<b>2023</b>, <em>PCCP</em>, 25, 23626
+							</li><br>
+							<li><a href="https://www.mdpi.com/1420-3049/27/24/8796"><em>Photochemical Degradation of the UV Filter Octyl Methoxy Cinnamate Probed via Laser-Interfaced Mass Spectrometry</em></a><br>
+								Natalie G. K. Wong, Maria Sereli, Cate S. Anstöter &amp; Caroline E. H. Dessent<br>
+								<b>2022</b>, <em>Molecules</em>, 27, 8796
+							</li><br>
+							<li><a href="https://pubs.acs.org/doi/full/10.1021/acs.jpca.2c06122"><em>Effective Fragment Potentials for Microsolvated Excited and Anionic States</em></a><br>
+								Cate S Anstöter, Salsabil Abou-Hatab, Mushir Thodika &amp; Spiridoula Matsika<br>
+								<b>2022</b>, <em>J. Phys. Chem. A</em>, 126, 8508
+							</li><br>
+							<li><a href="https://pubs.acs.org/doi/full/10.1021/acs.jpclett.2c02931"><em>Spectroscopy and Theoretical Modeling of Tetracene Anion Resonances</em></a><br>
+								Cole R. Sagan, Cate S. Anstöter<sup>*</sup>, Mushir Thodika, Kenneth D. Wilson, Spiridoula Matsika &amp; Etienne Garand<br>
+								<b>2022</b>, <em>J. Phys. Chem. Letts</em>, 13, 10245
+							</li><br>
+							<li><a href="https://pubs.aip.org/aip/jcp/article/157/6/064302/2841701"><em>Resonances in Nitrobenzene Probed by the Electron Attachment to Neutral and by the Photodetachment from Anion</em></a><br>
+								Miloš Ranković, Pamir Nag, Cate S. Anstöter, Golda Mensa-Bonsu, Ragesh Kumar TP, Jan R. R. Verlet &amp; Juraj Fedor<br>
+								<b>2022</b>, <em>J. Chem. Phys.</em>, 157, 064302
+							</li><br>
+							<li><a href="https://pubs.aip.org/aip/jcp/article/157/6/064302/2841701"><em>A Hückel Model for the Excited-State Dynamics of a Protein Chromophore Developed Using Photoelectron Imaging</em></a><br>
+								Cate S Anstöter<sup>*</sup> &amp; Jan R. R. Verlet<br>
+								<b>2022</b>, <em>Acc. Chem. Res.</em>, 55, 1205
+							</li><br>
+							<li><a href="https://pubs.rsc.org/en/content/articlehtml/2022/cp/d2cp03831e"><em>Probing the Electronic Relaxation Pathways and Photostability of the Synthetic Nucleobase Z via Laser Interfaced Mass Spectrometry</em></a><br>
+								William Whitaker, Katya E. Moncrieff, Cate S. Anstöter, Natalie G. K. Wong, Jacob A. Berenbeim &amp; Caroline E. H. Dessent<br>
+								<b>2022</b>, <em>PCCP</em>, 24, 27836
+							</li><br>
+							<li><a href="https://pubs.rsc.org/en/content/articlehtml/2022/cp/d2cp01612e"><em>Photostability of the Deprotonated Forms of the UV Filters Homosalate and Octyl Salicylate</em></a><br>
+								Natalie G. K. Wong, Conor D. Rankine, Cate S. Anstöter &amp; Caroline E. H. Dessent<br>
+								<b>2022</b>, <em>PCCP</em>, 24, 17068
+							</li><br>
+							<li><a href="https://pubs.rsc.org/en/content/articlehtml/2022/cp/d1cp05259d"><em>Photo-isomerization of the Isolated Photoactive Yellow Protein Chromophore: What Comes Before the Primary Step?</em></a><br>
+								Cate S. Anstöter, Basile F. E. Curchod &amp; Jan R. R. Verlet<br>
+								<b>2022</b>, <em>PCCP</em>, 24, 1305
+							</li><br>
+							<li><a href="https://pubs.acs.org/doi/full/10.1021/acs.jpclett.1c03532"><em>Nonadiabatic Dynamics between Valence, Nonvalence, and Continuum Electronic States in a Heteropolycyclic Aromatic Hydrocarbon</em></a><br>
+								James N. Bull, Cate S. Anstöter, Mark H. Stockett, Connor J. Clarke, Jemma A. Gibbard, Evan J. Bieske &amp; Jan R. R. Verlet<br>
+								<b>2021</b>, <em>J. Phys. Chem. Letts</em>, 12, 11811
+							</li><br>
+							<li><a href="https://pubs.acs.org/doi/full/10.1021/acs.jpca.1c05288"><em>Modeling the Ultrafast Electron Attachment Dynamics of Solvated Uracil</em></a><br>
+								Cate S. Anstöter<sup>*</sup>, Mark DelloStritto, Michael L. Klein &amp; Spiridoula Matsika<br>
+								<b>2021</b>, <em>J. Phys. Chem. A</em>, 125, 6995
+							</li><br>
+							<li><a href="https://pubs.acs.org/doi/full/10.1021/acs.jpca.1c03379"><em>Modeling the Photoelectron Angular Distributions of Molecular Anions</em></a><br>
+								Cate S. Anstöter<sup>*</sup> &amp; Jan R. R. Verlet<br>
+								<b>2021</b>, <em>J. Phys. Chem. A</em>, 125, 4888
+							</li><br>
+							<li><a href="https://www.tandfonline.com/doi/full/10.1080/00268976.2020.1821921"><em>Photoelectron Imaging of the SO<sub>3</sub> Anion: Vibrational Resolution in Photoelectron Angular Distributions</em></a><br>
+								Cate S. Anstöter &amp; Jan R. R. Verlet<br>
+								<b>2021</b>, <em>Mol. Phys.</em>, 119, 1
+							</li><br>
+							<li><a href="https://pubs.rsc.org/en/content/articlehtml/2021/cp/d1cp00261a"><em>Autodetachment Dynamics of 2-naphthoxide and Implications for Astrophysical Anion Abundance</em></a><br>
+								Eleanor K. Ashworth, Cate S. Anstöter, Jan R. R. Verlet &amp; James N. Bull<br>
+								<b>2021</b>, <em>PCCP</em>, 23, 5817
+							</li><br>
+							<li><a href="https://pubs.acs.org/doi/full/10.1021/acs.jpca.0c07407"><em>Understanding the Interplay between the Nonvalence and Valence States of the Uracil Anion upon Monohydration</em></a><br>
+								Cate S. Anstöter<sup>*</sup> &amp; Spiridoula Matsika<br>
+								<b>2020</b>, <em>J. Phys. Chem. A</em>, 124, 9237
+							</li><br>
+							<li><a href="https://pubs.acs.org/doi/full/10.1021/acs.jpclett.0c02036"><em>Gas-Phase Synthesis and Characterization of the Methyl-2,2-dicyanoacetate Anion Using Photoelectron Imaging and Dipole-Bound State Autodetachment</em></a><br>
+								Cate S. Anstöter<sup>*</sup> &amp; Jan R. R. Verlet<br>
+								<b>2020</b>, <em>J. Phys. Chem. Letts</em>, 11, 6456
+							</li><br>
+							<li><a href="https://www.nature.com/articles/s41467-020-16667-x"><em>Geometric and Electronic Structure Probed Along the Isomerisation Coordinate of a Photoactive Yellow Protein Chromophore</em></a><br>
+								Cate S. Anstöter, Basile F. E. Curchod &amp; Jan R. R. Verlet<br>
+								<b>2020</b>, <em>J. Nat. Commun.</em>, 11, 2827
+							</li><br>
+							<li><a href="https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.124.203401"><em>Mode-Specific Vibrational Autodetachment Following Excitation of Electronic Resonances by Electrons and Photons</em></a><br>
+								Cate S. Anstöter, Golda Mensa-Bonsu, Pamir Nag, Miloš Ranković, Ragesh Kumar TP, Anton N. Boichenko, Anastasia V. Bochenkova, Juraj Fedor &amp; Jan R. R. Verlet<br>
+								<b>2020</b>, <em>Phys. Rev. Lett.</em>, 124, 203401
+							</li><br>
+							<li><a href="https://pubs.acs.org/doi/full/10.1021/acs.jpca.0c01260"><em>Role of Nonvalence States in the Ultrafast Dynamics of Isolated Anions</em></a><br>
+								Jan R. R. Verlet, Cate S. Anstöter, James N. Bull &amp; Joshua P. Rogers<br>
+								<b>2020</b>, <em>J. Phys. Chem. A</em>, 124, 3507
+							</li><br>
+							<li><a href="https://pubs.acs.org/doi/full/10.1021/acs.jpca.9b11993"><em>Fingerprinting the Excited-State Dynamics in Methyl Ester and Methyl Ether Anions of Deprotonated para-Coumaric Acid</em></a><br>
+								James N. Bull, Cate S. Anstöter &amp; Jan R. R. Verlet<br>
+								<b>2020</b>, <em>J. Phys. Chem. A</em>, 124, 2140
+							</li><br>
+							<li><a href="https://hrcak.srce.hr/261080"><em>Catacondensed Chemical Hexagonal Complexes: A Natural Generalisation of Benzenoids</em></a><br>
+								Cate S. Anstöter, Nino Bašić, Patrick W. Fowler &amp; Tomaž Pisanski<br>
+								<b>2020</b>, <em>Croat. Chem. Acta</em>, 93, 289
+							</li><br>
+							<li><a href="https://pubs.rsc.org/en/content/articlehtml/2020/cp/d0cp02284e"><em>Modelling Aromatisation of (BN)<sub>n</sub>H<sub>2n</sub> Azabora-annulenes</em></a><br>
+								Cate S. Anstöter<sup>*</sup>, Christopher M. Gibson &amp; Patrick W. Fowler<br>
+								<b>2020</b>, <em>PCCP</em>, 22, 15919
+							</li><br>
+							<li><a href="https://www.nature.com/articles/s41467-019-13819-6"><em>Ultrafast Valence to Non-Valence Excited State Dynamics in a Common Anionic Chromophore</em></a><br>
+								James N. Bull, Cate S. Anstöter &amp; Jan R. R. Verlet<br>
+								<b>2019</b>, <em>Nat. Commun.</em>, 10, 5820
+							</li><br>
+							<li><a href="https://pubs.acs.org/doi/full/10.1021/jacs.9b01345"><em>Spectroscopic Determination of an Anion&minus;&pi; Bond Strength</em></a><br>
+								Cate S. Anstöter, Joshua P. Rogers &amp; Jan R. R. Verlet<br>
+								<b>2019</b>, <em>JACS</em>, 141, 6132
+							</li><br>
+							<li><a href="https://pubs.acs.org/doi/full/10.1021/acs.jpca.8b11627"><em>Photoelectron Spectroscopy of the Hexafluorobenzene Cluster Anions</em></a><br>
+								Joshua P. Rogers, Cate S. Anstöter, James N. Bull, Basile F. E. Curchod &amp; Jan R. R. Verlet<br>
+								<b>2019</b>, <em>J. Phys. Chem. A</em>, 123, 1602
+							</li><br>
+							<li><a href="https://pubs.rsc.org/en/content/articlehtml/2019/cp/c9cp04942h"><em>On the Stability of a Dipole-Bound State in the Presence of a Molecule</em></a><br>
+								Maria Elena Castellani, Cate S. Anstöter &amp; Jan R. R. Verlet<br>
+								<b>2019</b>, <em>PCCP</em>, 21, 24286
+							</li><br>
+							<li><a href="https://pubs.rsc.org/en/content/articlehtml/2019/cp/c9cp01624d"><em>Ultrafast Photoisomerisation of an Isolated Retinoid</em></a><br>
+								James N. Bull, Christopher W. West, Cate S. Anstöter, Gabriel da Silva, Evan J. Bieske &amp; Jan R. R. Verlet<br>
+								<b>2019</b>, <em>PCCP</em>, 21, 10567
+							</li><br>
+							<li><a href="https://pubs.acs.org/doi/full/10.1021/acs.jpclett.8b00739"><em>Evidence of Electron Capture of an Outgoing Photoelectron Wave by a Nonvalence State in (C<sub>6</sub>F<sub>6</sub>)<sub>n</sub><sup>-</sup></em></a><br>
+								Joshua P. Rogers, Cate S. Anstöter &amp; Jan R. R. Verlet<br>
+								<b>2018</b>, <em>J. Phys. Chem. Letts</em>, 10, 2504
+							</li><br>
+							<li><a href="https://www.nature.com/articles/nchem.2912"><em>Ultrafast Dynamics of Low-Energy Electron Attachment via a Non-Valence Correlation-Bound State</em></a><br>
+								Joshua P. Rogers, Cate S. Anstöter &amp; Jan R. R. Verlet<br>
+								<b>2018</b>, <em>Nature Chem.</em>, 10, 341
+							</li><br>
+							<li><a href="https://pubs.rsc.org/en/content/articlehtml/2014/cp/c8cp04877k"><em>Electronic Structure of the para-Dinitrobenzene Radical Anion</em></a><br>
+								Cate S. Anstöter, Thomas E. Gartmann, Laurence H. Stanley, Anastasia V. Bochenkova &amp; Jan R. R. Verlet<br>
+								<b>2018</b>, <em>PCCP</em>, 20, 24019
+							</li><br>
+							<li><a href="https://pubs.acs.org/doi/full/10.1021/acs.jpclett.7b00726"><em>Sensitivity of Photoelectron Angular Distributions to Molecular Conformations of Anions</em></a><br>
+								Cate S. Anstöter, Charlie R. Dean &amp; Jan R. R. Verlet<br>
+								<b>2017</b>, <em>J. Phys. Chem. Letts</em>, 8, 2268
+							</li><br>
+							<li><a href="https://pubs.rsc.org/en/content/articlehtml/2017/cp/c7cp05766k"><em>Chromophores of chromophores: a bottom-up Hückel picture of the excited states of photoactive proteins</em></a><br>
+								Cate S. Anstöter, Charlie R. Dean &amp; Jan R. R. Verlet<br>
+								<b>2017</b>, <em>PCCP</em>, 19, 29772
+							</li><br>
+							<li><a href="https://pubs.rsc.org/en/content/articlehtml/2017/sc/c6sc05405f"><em>Resonances of the Anthracenyl Anion Probed by Frequency-Resolved Photoelectron Imaging</em></a><br>
+								Laurence H Stanley, Cate S. Anstöter &amp; Jan R. R. Verlet<br>
+								<b>2017</b>, <em>Chem. Sci.</em>, 8, 3054
+							</li><br>
+							<li><a href="https://www.tandfonline.com/doi/full/10.1080/0144235X.2016.1203522"><em>Ultrafast Dynamics of Temporary Anions Probed Through the Prism of Photodetachment</em></a><br>
+								Cate S. Anstöter, James N. Bull &amp; Jan R. R. Verlet<br>
+								<b>2016</b>, <em>International Reviews in Physical Chemistry</em>, 8, 2268
+							</li><br>
+							<li><a href="https://pubs.acs.org/doi/full/10.1021/acs.jpcb.6b05271"><em>The Vitamin E Radical Probed by Anion Photoelectron Imaging</em></a><br>
+								Cate S. Anstöter, Christopher W. West, James N. Bull &amp; Jan RR Verlet<br>
+								<b>2016</b>, <em>J. Phys. Chem. B</em>, 120, 7108
+							</li><br>
+							<li><a href="https://pubs.acs.org/doi/full/10.1021/acs.jcim.5b00580"><em>The AIBLHiCoS Method: Predicting Aqueous pK<sub>a</sub> Values from Gas-Phase Equilibrium Bond Lengths</em></a><br>
+								Cate Anstöter, Beth A. Caine &amp; Paul L. A. Popelier<br>
+								<b>2016</b>, <em>J. Chem. Inf. Model</em>, 56, 471
+							</li>
+						</ol>
+					</p>
+				</article>
+
+				<!-- NEWS -->
+				<article id="news">
+					<h2 class="major">News</h2>
+
+					<h2>Upcoming</h2>
+					<dl>
+						<h3>2026</h3>
+						<dt>August</dt>
+						<dd>Cate will give an invited talk at the <a href="https://advances-in-theory-of-electronic-resonances.raiselysite.com/">Advances in Theory of Electronic Resonances</a> workshop in Telluride!</dd>
+						<dd>Chiara will join the <a href="https://iauarchive.eso.org/administration/membership/individual/15041/">García-Hernández group</a> in Tenerife, as part of a short term scientific mission. This STSM is supported by <a href="https://research.iac.es/proyecto/nanospace/">Carbon Molecular Nanostructures in Space COST network</a>!</dd>
+						<dt>June</dt>
+						<dd>Cate will host the <a href="https://csanstoter.github.io/MAGIC2026/">6th Workshop MAGnetically Induced Currents in molecules</a> at the University of Glasgow.</dd>
+						<dt>May</dt>
+						<dd>Cate took part in <a href="https://pintofscience.co.uk/">Pint of Science</a>'s <a href="https://www.glasgowsciencecentre.org/creative-reactions">Creative Reactions</a> festival, which pairs scientists with local artists — the artist then creates an original artwork inspired by the scientist's research. Cate was paired with Glasgow-based artist <a href="https://amusing-handball-242.notion.site/Gabriele-Rossi-Portfolio-2e6fccea9e5c80c8abd9c3f7cd3bd605">Gabriele Rossi</a>, who was inspired to build a sculpture. In his own words:<br><br>
+						<blockquote><i>"An ominous sun god stands over a sea of molecules, bombarding them with high energy rays. The molecules twist and dance while being hit by high energy particles. Will they survive the onslaught or will they break and never be the same again..."</i></blockquote><br>
+						<div class="carousel" id="carousel-creative-reactions">
+							<div class="carousel-track" id="carousel-creative-reactions-track">
+								<img src="images/GR1.jpeg" style="width:500px; height:380px; object-fit: cover;" alt="Creative Reactions 1"/>
+								<img src="images/GR2.jpeg" style="width:500px; height:380px; object-fit: cover;" alt="Creative Reactions 2"/>
+								<img src="images/GR3.jpeg" style="width:500px; height:380px; object-fit: cover;" alt="Creative Reactions 3"/>
+							</div>
+							<button class="carousel-btn prev" onclick="moveCarousel('carousel-creative-reactions', -1)">&#8249;</button>
+							<button class="carousel-btn next" onclick="moveCarousel('carousel-creative-reactions', 1)">&#8250;</button>
+						</div>
+						<div class="carousel-dots" id="carousel-creative-reactions-dots"></div>
+						</dd>
+						<dd>Cate gave a talk at <a href="https://csd11.si/index.html">Computers in Scientific Discovery 11</a>, in Kranjska Gora, Slovenia.<br>
+						<center><span class="image main"><img src="images/csd11.jpg" style="width:500px; height:380px; object-fit: cover;"/></span></center></dd>
+						<dt>April</dt>
+						<dd>New paper with the Matsika group <a href="https://pubs.acs.org/doi/10.1021/acs.jpclett.6c00590">is out now!</a>
+						<center><span class="image main"><img src="images/cover.jpg" style="width:380px; height:500px; object-fit: cover;"/></span></center>
+						Check out Kanishka and Maneesh's cover!</dd>
+						<dt>January</dt>
+						<dd>Cate has been elected as the secretary of the <a href="https://spectroscopyanddynamics.uk/sdg-meeting/">RSC Spectroscopy &amp; Dynamics special interest group</a></dd>
+						<dd>The <a href="https://winterschool.cc/program">12th edition of the Virtual Winter School of Computational Chemistry</a> ran successfully. Find the recorded talks <a href="https://zenodo.org/communities/vwscc/records?q=&l=list&p=1&s=10&sort=newest">here</a></dd>
+						<dd>Cate gave an invited talk at the <a href="https://www.icesaa-4.in/">4<sup>th</sup> International Conference on Excited State Aromaticity and Antiaromaticity (ICESAA-4)</a> hosted by ISSER Thiruvananthapuram!</dd>
+						<center><span class="image main"><img src="images/DSC_7309.JPG" style="width:500px; height:350px; object-fit: cover;"/></span></center>
+					</dl>
+
+					<h3>2025</h3>
+					<dl>
+						<dt>November</dt>
+						<dd>Our paper on perturbing the photochemical landscape of organic sunscreen AVB <a href="https://pubs.acs.org/doi/10.1021/jacs.5c12521">is available now online</a> at <em>JACS</em>!</dd>
+						<dt>October</dt>
+						<dd>Cate joined the University of Glasgow as a Lecturer in Physical Chemistry!</dd>
+						<dt>August</dt>
+						<dd>Annie gave an excellent presentation on the work from her summer project at a summer research symposium.</dd>
+						<center><img src="images/IMG_5655.jpeg" style="width:500px; height:380px; object-fit: cover;"/></center>
+						<dt>June</dt>
+						<dd>Annie joins the group for a summer project, funded by a Carnegie Scholarship!</dd>
+						<dd>The VWSCC ran a special one-day event, to showcase the Q-Chem 6.3. Find the recorded talks <a href="https://zenodo.org/records/15648308">here</a></dd>
+						<dt>May</dt>
+						<dd>Cate visited KU Leuven to give a seminar and meet with the <a href="https://chem.kuleuven.be/en/research/qcpc/tue">Jagau group</a></dd>
+						<dt>April</dt>
+						<dd>Cate gave an invited talk and panel discussion as part of the <a href="https://cosmosproject.co.uk/news/ecr_careers_and_science_1/"><em>Women in Photochemistry</em></a> Meeting at UCL, as part of UPDICE</dd>
+						<center><img src="images/cosmos.jpg" style="width:500px; height:280px; object-fit: cover;"/></center>
+						<dt>January</dt>
+						<dd><a href="https://doi.org/10.1002/cphc.202401069"><em>Perturbing Pentalene</em> invited paper</a> is online at <em>PhysChemPhys</em>!</dd>
+						<dd>The <a href="https://winterschool.cc/program">11th edition of the Virtual Winter School of Computational Chemistry</a> ran successfully. Find the recorded talks <a href="https://zenodo.org/communities/vwscc/records?q=&l=list&p=1&s=10&sort=newest">here</a></dd>
+						<dd>CSA group attended the RSC Spectroscopy and Dynamics Group Meeting in Leicester, Chiara presented a poster and Cate gave an invited talk.</dd>
+					</dl>
+
+					<h3>2024</h3>
+					<dl>
+						<dt>November</dt>
+						<dd>Paper in collaboration with the <a href="https://www.ingleson.chem.ed.ac.uk/">Ingleson group</a> is <a href="https://doi.org/10.1002/anie.202419094">out now</a> as a VIP paper in Angewandte</dd>
+						<dd>Cate gave a departmental seminar at Newcastle University</dd>
+						<dt>September</dt>
+						<dd>Cate gave an invited talk at the <a href="https://www.plus.ac.at/magic2024/">5th Workshop on MAGnetically Induced Molecular Currents</a> in Frauenwörth</dd>
+						<center><span class="image main"><img src="images/MAGIC24.jpg" style="width:500px; height:340px; object-fit: cover;"/></span></center>
+						<dt>August</dt>
+						<dd>Publication with the <a href="https://isla-edi.com/">E. K. Campbell group</a> is <a href="https://pubs.aip.org/aip/jcp/article/161/7/074305/3308098/Electronic-and-vibrational-spectroscopy-of">out now</a></dd>
+						<dt>June</dt>
+						<dd>Cate gave an invited talk and panel discussion as part of the <a href="https://updiceproject.com/2024/06/12/women-in-photochemistry-symposium-11-june-2024-ucl/"><em>Women in Photochemistry</em></a> Meeting at UCL, as part of UPDICE</dd>
+						<dt>April</dt>
+						<dd>Paper in collaboration with the <a href="https://www.uni-frankfurt.de/58708118/Group_of_Prof__Dr__Matthias_Wagner">Wagner group</a> out now in <a href="https://pubs.acs.org/doi/full/10.1021/jacs.4c02163"><em>JACS</em>!</a></dd>
+						<dt>January</dt>
+						<dd>First CSA group <a href="https://chemistry-europe.onlinelibrary.wiley.com/doi/full/10.1002/cphc.202300791">paper</a> out now</dd>
+					</dl>
+
+					<h3>2023</h3>
+					<dl>
+						<dt>October</dt>
+						<dd>Beginning of Cate's Christina Miller Fellowship</dd>
+					</dl>
+				</article>
 
 			</div>
 
-			<!--	This is the background image of the site.
-				All configuration of the background is done with CSS.
-				Look in the file assets/css/main.css and search for "#bg" to
-				see how this element is styled. Look for comments pointing 
-				to where you can set a new background image.
-			-->
-			<div id="bg"></div>
+			<footer id="footer">
+				<p class="copyright">&copy; CSA. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+			</footer>
 
-			<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+		</div>
+
+		<div id="bg"></div>
+
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/browser.min.js"></script>
+		<script src="assets/js/breakpoints.min.js"></script>
+		<script src="assets/js/util.js"></script>
+		<script src="assets/js/main.js"></script>
 
 	</body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
