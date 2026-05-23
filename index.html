@@ -438,7 +438,6 @@
 						<span style="display:flex;align-items:center;gap:0.4rem;"><span style="display:inline-block;width:8px;height:8px;border-radius:50%;background:#4caf8a;flex-shrink:0;"></span>Synthesis</span>
 						<span style="display:flex;align-items:center;gap:0.4rem;"><span style="display:inline-block;width:8px;height:8px;border-radius:50%;background:#e6a84a;flex-shrink:0;"></span>IR spectroscopy</span>
 						<span style="display:flex;align-items:center;gap:0.4rem;"><span style="display:inline-block;width:8px;height:8px;border-radius:50%;background:#22d3ee;flex-shrink:0;"></span>Graph theory</span>
-						<span style="display:flex;align-items:center;gap:0.4rem;"><span style="display:inline-block;width:8px;height:8px;border-radius:50%;background:linear-gradient(to right,#a78bde 50%,#22d3ee 50%);flex-shrink:0;"></span>Theory + Graph theory</span>
 					</div>
 				</div>
 
@@ -1168,12 +1167,12 @@
 			});
 
 			/* Initial view — centred, slight zoom out for breathing room */
-			svg.call(zoom.transform, d3.zoomIdentity.translate(CX*(1-0.85), CY*(1-0.85)).scale(0.85));
+			svg.call(zoom.transform, d3.zoomIdentity.translate(CX*(1-0.85) - 40, CY*(1-0.85)).scale(0.85));
 		}
 
 		window.collabReset = function() {
 			if (svg) svg.transition().duration(600).call(
-				zoom.transform, d3.zoomIdentity.translate(CX*(1-0.85), CY*(1-0.85)).scale(0.85)
+				zoom.transform, d3.zoomIdentity.translate(CX*(1-0.85) - 40, CY*(1-0.85)).scale(0.85)
 			);
 		};
 
