@@ -438,6 +438,7 @@
 						<span style="display:flex;align-items:center;gap:0.4rem;"><span style="display:inline-block;width:8px;height:8px;border-radius:50%;background:#4caf8a;flex-shrink:0;"></span>Synthesis</span>
 						<span style="display:flex;align-items:center;gap:0.4rem;"><span style="display:inline-block;width:8px;height:8px;border-radius:50%;background:#e6a84a;flex-shrink:0;"></span>IR spectroscopy</span>
 						<span style="display:flex;align-items:center;gap:0.4rem;"><span style="display:inline-block;width:8px;height:8px;border-radius:50%;background:#22d3ee;flex-shrink:0;"></span>Graph theory</span>
+						<span style="display:flex;align-items:center;gap:0.4rem;"><span style="display:inline-block;width:8px;height:8px;border-radius:50%;background:linear-gradient(to right,#a78bde 50%,#22d3ee 50%);flex-shrink:0;"></span>Theory + Graph theory</span>
 					</div>
 				</div>
 
@@ -942,9 +943,10 @@
 
 	
 	<script>
-	/* ── COLLABORATION NETWORK ─────────────────────────────────── */
+	/* ── COLLABORATION NETWORK — radial layout ─────────────────── */
 	(function () {
-		var FIXED_W = 800, FIXED_H = 480;
+		var FIXED_W = 800, FIXED_H = 500;
+		var CX = FIXED_W / 2, CY = FIXED_H / 2;
 
 		var GROUPS = {
 			self:        '#f472b6',
@@ -955,8 +957,9 @@
 			graphtheory: '#22d3ee',
 			dual:        '#a78bde'
 		};
-		var nodes = [
-			{id:'CSA',        name:'Anstöter',    inst:'Glasgow',                group:'self',        papers:48},
+
+		/* All non-CSA nodes — order determines angular position */
+		var outerNodes = [
 			{id:'Verlet',     name:'Verlet',       inst:'Durham',                 group:'experiment',  papers:23},
 			{id:'Bull',       name:'Bull',         inst:'East Anglia',            group:'experiment',  papers:10},
 			{id:'Dessent',    name:'Dessent',      inst:'York',                   group:'experiment',  papers:6},
@@ -979,6 +982,22 @@
 			{id:'Basic',      name:'Bašić',        inst:'Univ. Primorska',        group:'graphtheory', papers:1},
 			{id:'Pisanski',   name:'Pisanski',     inst:'Univ. Primorska',        group:'graphtheory', papers:1}
 		];
+
+		var csaNode = {id:'CSA', name:'Anstöter', inst:'Glasgow', group:'self', papers:53,
+		               fx: CX, fy: CY};
+
+		/* Pre-assign starting positions evenly around a circle so the
+		   radial force has a clean starting point and the layout is
+		   deterministic from the first tick. */
+		var RADIUS = 195;
+		outerNodes.forEach(function(d, i) {
+			var angle = (2 * Math.PI * i / outerNodes.length) - Math.PI / 2;
+			d.x = CX + RADIUS * Math.cos(angle);
+			d.y = CY + RADIUS * Math.sin(angle);
+		});
+
+		var nodes = [csaNode].concat(outerNodes);
+
 		var links = [
 			{source:'CSA',target:'Verlet',     weight:23,primary:true},
 			{source:'CSA',target:'Bull',       weight:10,primary:true},
@@ -1030,54 +1049,65 @@
 
 			svg = d3.select(svgEl);
 
+			/* Gradient for Fowler (dual group) */
 			var defs = svg.append('defs');
 			var fg = defs.append('linearGradient').attr('id','fowler-grad')
 				.attr('x1','0%').attr('x2','100%').attr('y1','0%').attr('y2','0%');
 			fg.append('stop').attr('offset','50%').attr('stop-color','#a78bde');
 			fg.append('stop').attr('offset','50%').attr('stop-color','#22d3ee');
 
-			zoom = d3.zoom().scaleExtent([0.2,5])
+			zoom = d3.zoom().scaleExtent([0.2, 5])
 				.on('zoom', function(e){ g.attr('transform', e.transform); });
 			svg.call(zoom);
-
 			g = svg.append('g');
 
+			/* Scales */
 			var maxW = d3.max(links.filter(function(l){return l.primary;}), function(d){return d.weight;});
-			var ss   = d3.scaleSqrt().domain([1,maxW]).range([1,8]);
-			var maxP = d3.max(nodes.filter(function(d){return d.id!=='CSA';}), function(d){return d.papers;});
-			function nr(d){ return d.id==='CSA' ? 22 : 8 + (d.papers/maxP)*14; }
+			var ss   = d3.scaleSqrt().domain([1, maxW]).range([1, 8]);
+			var maxP = d3.max(outerNodes, function(d){return d.papers;});
+			function nr(d){ return d.id==='CSA' ? 24 : 8 + (d.papers/maxP)*14; }
 			function nc(d){ return d.group==='dual' ? 'url(#fowler-grad)' : (GROUPS[d.group]||'#888'); }
 
+			/* ── FORCES ────────────────────────────────────────────── */
 			sim = d3.forceSimulation(nodes)
+				/* Radial: pull outer nodes to a fixed ring radius */
+				.force('radial', d3.forceRadial(RADIUS, CX, CY)
+					.strength(function(d){ return d.id==='CSA' ? 0 : 0.7; }))
+				/* Link: allow secondary (PI-PI) edges to pull neighbours together */
 				.force('link', d3.forceLink(links).id(function(d){return d.id;})
 					.distance(function(d){
-						if(!d.primary) return 70;
-						if(d.weight>=15) return 120;
-						if(d.weight>=5)  return 160;
-						if(d.weight>=2)  return 190;
-						return 210;
+						return d.primary ? 0 : 45;  /* primary distance handled by radial */
 					})
-					.strength(function(d){return d.primary?0.55:0.08;}))
-				.force('charge', d3.forceManyBody().strength(function(d){return d.id==='CSA'?-800:-220;}))
-				.force('center', d3.forceCenter(FIXED_W/2 + -140, FIXED_H/2 + 60))
-				.force('collision', d3.forceCollide().radius(function(d){return nr(d)+16;}));
+					.strength(function(d){ return d.primary ? 0 : 0.15; }))
+				/* Mild repulsion to stop nodes overlapping on the ring */
+				.force('charge', d3.forceManyBody().strength(-60))
+				/* Collision to prevent label overlap */
+				.force('collision', d3.forceCollide().radius(function(d){ return nr(d)+20; }))
+				/* CSA is pinned at centre via fx/fy on the node object */
+				.alphaDecay(0.02);
 
+			/* ── EDGES ─────────────────────────────────────────────── */
 			var secE = g.append('g').selectAll('line')
 				.data(links.filter(function(l){return !l.primary;})).join('line')
 				.attr('stroke','rgba(255,255,255,0.09)').attr('fill','none').attr('stroke-linecap','round')
-				.attr('stroke-width', function(d){return Math.max(0.4,ss(d.weight)*0.35);});
+				.attr('stroke-width', function(d){return Math.max(0.4, ss(d.weight)*0.35);});
 
 			var primE = g.append('g').selectAll('line')
 				.data(links.filter(function(l){return l.primary;})).join('line')
 				.attr('stroke','rgba(255,255,255,0.24)').attr('fill','none').attr('stroke-linecap','round')
 				.attr('stroke-width', function(d){return ss(d.weight);});
 
+			/* ── NODES ─────────────────────────────────────────────── */
 			var ng = g.append('g').selectAll('g')
 				.data(nodes).join('g').style('cursor','pointer')
 				.call(d3.drag()
 					.on('start',function(e,d){if(!e.active)sim.alphaTarget(0.3).restart();d.fx=d.x;d.fy=d.y;})
 					.on('drag', function(e,d){d.fx=e.x;d.fy=e.y;})
-					.on('end',  function(e,d){if(!e.active)sim.alphaTarget(0);d.fx=null;d.fy=null;}));
+					.on('end',  function(e,d){
+						if(!e.active)sim.alphaTarget(0);
+						/* Re-pin CSA; release others back to radial force */
+						if(d.id!=='CSA'){d.fx=null;d.fy=null;}
+					}));
 
 			ng.append('circle').attr('r',nr).attr('fill',nc)
 				.attr('fill-opacity',function(d){return d.id==='CSA'?1:0.84;})
@@ -1102,6 +1132,7 @@
 				.attr('dy','0.85em')
 				.text(function(d){return d.inst;});
 
+			/* ── TOOLTIP ───────────────────────────────────────────── */
 			var tt   = document.getElementById('collab-tt');
 			var wrap = document.getElementById('collab-wrap');
 			ng.on('mouseover',function(e,d){
@@ -1127,6 +1158,7 @@
 			})
 			.on('mouseout',function(){tt.style.opacity='0';});
 
+			/* ── TICK ──────────────────────────────────────────────── */
 			sim.on('tick',function(){
 				primE.attr('x1',function(d){return d.source.x;}).attr('y1',function(d){return d.source.y;})
 				     .attr('x2',function(d){return d.target.x;}).attr('y2',function(d){return d.target.y;});
@@ -1134,18 +1166,17 @@
 				    .attr('x2',function(d){return d.target.x;}).attr('y2',function(d){return d.target.y;});
 				ng.attr('transform',function(d){return 'translate('+d.x+','+d.y+')';});
 			});
+
+			/* Initial view — centred, slight zoom out for breathing room */
+			svg.call(zoom.transform, d3.zoomIdentity.translate(FIXED_W/2, FIXED_H/2).scale(0.82));
 		}
 
 		window.collabReset = function() {
 			if (svg) svg.transition().duration(600).call(
-				zoom.transform, d3.zoomIdentity.translate(FIXED_W/2 - 300, FIXED_H/2 + 10).scale(0.4)
+				zoom.transform, d3.zoomIdentity.translate(FIXED_W/2, FIXED_H/2).scale(0.82)
 			);
 		};
 
-		/* Initialise immediately on DOMContentLoaded — D3 is loaded
-		   synchronously in <head> so it is always available here.
-		   We use FIXED_W/FIXED_H (not clientWidth) so the hidden article
-		   does not cause zero-size initialisation. */
 		document.addEventListener('DOMContentLoaded', buildGraph);
 	})();
 	</script>
