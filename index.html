@@ -438,7 +438,6 @@
 						<span style="display:flex;align-items:center;gap:0.4rem;"><span style="display:inline-block;width:8px;height:8px;border-radius:50%;background:#4caf8a;flex-shrink:0;"></span>Synthesis</span>
 						<span style="display:flex;align-items:center;gap:0.4rem;"><span style="display:inline-block;width:8px;height:8px;border-radius:50%;background:#e6a84a;flex-shrink:0;"></span>IR spectroscopy</span>
 						<span style="display:flex;align-items:center;gap:0.4rem;"><span style="display:inline-block;width:8px;height:8px;border-radius:50%;background:#22d3ee;flex-shrink:0;"></span>Graph theory</span>
-						<span style="display:flex;align-items:center;gap:0.4rem;"><span style="display:inline-block;width:8px;height:8px;border-radius:50%;background:linear-gradient(to right,#a78bde 50%,#22d3ee 50%);flex-shrink:0;"></span>Theory + Graph theory</span>
 					</div>
 				</div>
 
@@ -957,7 +956,7 @@
 			dual:        '#a78bde'
 		};
 		var nodes = [
-			{id:'CSA',        name:'Anstöter',    inst:'Glasgow',                group:'self',        papers:53},
+			{id:'CSA',        name:'Anstöter',    inst:'Glasgow',                group:'self',        papers:48},
 			{id:'Verlet',     name:'Verlet',       inst:'Durham',                 group:'experiment',  papers:23},
 			{id:'Bull',       name:'Bull',         inst:'East Anglia',            group:'experiment',  papers:10},
 			{id:'Dessent',    name:'Dessent',      inst:'York',                   group:'experiment',  papers:6},
@@ -1139,7 +1138,7 @@
 
 		window.collabReset = function() {
 			if (svg) svg.transition().duration(600).call(
-				zoom.transform, d3.zoomIdentity.translate(FIXED_W/2 - 280, FIXED_H/2 + 30).scale(0.50)
+				zoom.transform, d3.zoomIdentity.translate(FIXED_W/2 - 300, FIXED_H/2 + 10).scale(0.4)
 			);
 		};
 
