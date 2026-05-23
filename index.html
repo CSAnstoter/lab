@@ -1168,12 +1168,12 @@
 			});
 
 			/* Initial view — centred, slight zoom out for breathing room */
-			svg.call(zoom.transform, d3.zoomIdentity.translate(FIXED_W/2, FIXED_H/2).scale(0.82));
+			svg.call(zoom.transform, d3.zoomIdentity.translate(CX*(1-0.85), CY*(1-0.85)).scale(0.85));
 		}
 
 		window.collabReset = function() {
 			if (svg) svg.transition().duration(600).call(
-				zoom.transform, d3.zoomIdentity.translate(FIXED_W/2, FIXED_H/2).scale(0.82)
+				zoom.transform, d3.zoomIdentity.translate(CX*(1-0.85), CY*(1-0.85)).scale(0.85)
 			);
 		};
 
