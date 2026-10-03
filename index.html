@@ -136,6 +136,36 @@
 				border-radius: 4px;
 			}
 
+			/* ── NAV: SIX EQUAL TABS ───────────────────────────────────────
+			   With an even number of tabs, the template draws a line through
+			   the centre of the nav, assuming both halves are equally wide.
+			   Equal-width tabs make that line land exactly on a divider.
+			   Below 1181px the tabs sit in rows of three, then two; on phones
+			   (480px and below) the template's vertical list takes over. */
+			@media screen and (min-width: 481px) {
+				#header nav ul {
+					display: grid;
+					grid-template-columns: repeat(6, 1fr);
+				}
+				#header nav ul li a {
+					min-width: 0;
+					text-align: center;
+				}
+			}
+			@media screen and (min-width: 721px) and (max-width: 1180px) {
+				#header nav ul { grid-template-columns: repeat(3, 1fr); }
+				#header nav ul li:nth-child(3n+1) { border-left: 0; }
+				#header nav ul li:nth-child(n+4) { border-top: solid 1px #ffffff; }
+				#header nav.use-middle:after { display: none; }
+			}
+			@media screen and (min-width: 481px) and (max-width: 720px) {
+				#header nav ul { grid-template-columns: repeat(2, 1fr); }
+				#header nav ul li:nth-child(2n+1) { border-left: 0; }
+				#header nav ul li:nth-child(n+3) { border-top: solid 1px #ffffff; }
+				#header nav.use-middle:after { display: none; }
+				#header nav.use-middle ul li.is-middle { border-left: solid 1px #ffffff; }
+			}
+
 			/* ── PUBLICATION LISTS (replaces <br> spacers between items) ── */
 			.pub-list li { margin-bottom: 1.1rem; }
 
